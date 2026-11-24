@@ -1,0 +1,2595 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#120a03" />
+<title>عسل ناب — سفری به قلب طلایی طبیعت</title>
+<meta name="description" content="عسل ناب؛ عسل خام و طبیعی از ارتفاعات بکر ایران. سفری سینمایی به قلب کندوی طلایی و کلکسیونی از چهار عسل تک‌منطقه‌ای." />
+<meta property="og:title" content="عسل ناب — سفری به قلب طلایی طبیعت" />
+<meta property="og:description" content="عسل خام، بدون حرارت، تک‌منطقه‌ای. چهار طعم از چهار اقلیم ایران." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="jar-gon.jpg" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23120a03'/%3E%3Cpath d='M32 9 52 21v22L32 55 12 43V21L32 9Z' fill='none' stroke='%23fbbf24' stroke-width='2'/%3E%3Cpath d='M32 22c4.4 6 7.2 9.5 7.2 13.4a7.2 7.2 0 1 1-14.4 0C24.8 31.5 27.6 28 32 22Z' fill='%23f59e0b'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   عسل ناب — single file experience
+   Dark amber glass · Persian editorial type · scroll tunnel
+   ============================================================ */
+:root{
+  --ink:#0d0703;
+  --ink-2:#140c05;
+  --ink-3:#1e1207;
+  --amber:#f59e0b;
+  --amber-2:#d97706;
+  --gold:#fbbf24;
+  --gold-soft:#fde68a;
+  --cream:#fdf6e7;
+  --muted:#c9ae83;
+  --muted-2:#95784e;
+  --line:rgba(251,191,36,.16);
+  --line-soft:rgba(253,230,138,.09);
+  --font:'Vazirmatn','Segoe UI',Tahoma,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --ease-soft:cubic-bezier(.4,0,.2,1);
+  --shadow:0 40px 120px rgba(0,0,0,.55);
+  --header-h:76px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scrollbar-gutter:stable}
+body{
+  margin:0;background:var(--ink);color:var(--cream);
+  font-family:var(--font);line-height:1.6;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+::selection{background:rgba(245,158,11,.32);color:#fff}
+h1,h2,h3,h4,p,figure{margin:0}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+a{color:inherit;text-decoration:none}
+ul{list-style:none;margin:0;padding:0}
+::-webkit-scrollbar{width:9px}
+::-webkit-scrollbar-track{background:#0a0502}
+::-webkit-scrollbar-thumb{background:#4a2d0f;border-radius:99px;border:2px solid #0a0502}
+::-webkit-scrollbar-thumb:hover{background:#6b4314}
+html.no-webgl body{background:
+  radial-gradient(ellipse at 50% 34%,rgba(245,158,11,.23),transparent 48%),
+  radial-gradient(ellipse at 50% 100%,rgba(217,119,6,.16),transparent 60%),
+  #0d0703;
+}
+
+/* ---------- canvas / atmosphere ---------- */
+#webgl{position:fixed;inset:0;width:100vw;height:100vh;display:block;z-index:0;background:#120a03}
+html.no-webgl #webgl{display:none}
+.fallback{
+  position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .8s ease;
+  background:
+    radial-gradient(circle at 50% 42%,rgba(251,191,36,.2),transparent 22%),
+    radial-gradient(ellipse at 50% 62%,rgba(180,83,9,.2),transparent 55%),
+    repeating-linear-gradient(60deg,transparent 0 52px,rgba(251,191,36,.035) 52px 53px),
+    repeating-linear-gradient(-60deg,transparent 0 52px,rgba(251,191,36,.03) 52px 53px),
+    #0d0703;
+}
+html.no-webgl .fallback{opacity:1}
+.vignette{
+  position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 50% 44%,transparent 34%,rgba(7,4,1,.42) 100%),
+    linear-gradient(180deg,rgba(7,4,1,.42) 0%,transparent 22%,transparent 72%,rgba(7,4,1,.48) 100%);
+}
+.noise{
+  position:fixed;inset:0;z-index:95;pointer-events:none;opacity:.028;mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.88' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:180px 180px;
+}
+.cursor-glow{
+  position:fixed;top:0;left:0;width:420px;height:420px;z-index:2;border-radius:50%;
+  pointer-events:none;opacity:0;transition:opacity .6s ease;
+  background:radial-gradient(circle,rgba(251,191,36,.09),rgba(245,158,11,.035) 36%,transparent 68%);
+  mix-blend-mode:screen;will-change:transform;
+}
+@media (pointer:fine){.cursor-glow{opacity:.8}}
+
+/* ---------- loader ---------- */
+.loader{
+  position:fixed;inset:0;z-index:500;display:grid;place-items:center;
+  background:radial-gradient(circle at 50% 45%,#1a0e05,#070301 70%);
+  transition:opacity .9s var(--ease),visibility .9s;
+}
+html.is-loaded .loader{opacity:0;visibility:hidden;pointer-events:none}
+.loader-inner{display:flex;flex-direction:column;align-items:center;gap:20px}
+.loader-mark{width:56px;height:56px;color:var(--gold);filter:drop-shadow(0 0 20px rgba(245,158,11,.4));animation:loaderPulse 2.2s ease-in-out infinite}
+.loader-name{font-size:1rem;font-weight:700;color:var(--cream)}
+.loader-line{width:132px;height:1px;background:rgba(251,191,36,.16);overflow:hidden;position:relative}
+.loader-line::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:loaderSweep 1.6s var(--ease-soft) infinite}
+@keyframes loaderSweep{0%{transform:translateX(-110%)}100%{transform:translateX(110%)}}
+@keyframes loaderPulse{0%,100%{opacity:.6;transform:scale(.96)}50%{opacity:1;transform:scale(1.03)}}
+
+/* ---------- progress / header ---------- */
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:130;background:rgba(255,255,255,.035);pointer-events:none}
+.scroll-progress span{
+  display:block;height:100%;width:100%;transform:scaleX(0);transform-origin:right center;
+  background:linear-gradient(90deg,var(--amber-2),var(--gold) 55%,#fff3c4);
+  box-shadow:0 0 14px rgba(251,191,36,.5);transition:transform .12s linear;
+}
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:120;
+  display:flex;align-items:center;justify-content:space-between;gap:22px;
+  padding:16px clamp(16px,3.2vw,42px);
+  transition:padding .45s var(--ease);
+}
+.site-header::before{
+  content:'';position:absolute;inset:0;z-index:-1;opacity:.62;
+  background:linear-gradient(180deg,rgba(10,6,2,.88),rgba(10,6,2,.42));
+  border-bottom:1px solid rgba(251,191,36,.09);
+  backdrop-filter:blur(18px) saturate(125%);-webkit-backdrop-filter:blur(18px) saturate(125%);
+  transition:opacity .4s ease;
+}
+.site-header.is-scrolled{padding-top:11px;padding-bottom:11px}
+.site-header.is-scrolled::before{opacity:1}
+.brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.brand-mark{width:38px;height:38px;color:var(--gold);filter:drop-shadow(0 0 12px rgba(245,158,11,.35));transition:transform .6s var(--ease)}
+.brand:hover .brand-mark{transform:rotate(30deg)}
+.brand-copy{display:flex;flex-direction:column;line-height:1.15;gap:2px}
+.brand-name{font-size:1.12rem;font-weight:800;color:var(--cream)}
+.brand-latin{font-size:.5rem;letter-spacing:.34em;color:var(--muted-2);direction:ltr;text-align:left;font-weight:500}
+.header-nav{
+  display:flex;align-items:center;gap:2px;padding:4px;border-radius:999px;
+  background:rgba(255,255,255,.026);border:1px solid rgba(253,230,138,.08);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
+.nav-link{
+  padding:8px 14px;border-radius:999px;font-size:.79rem;font-weight:500;color:var(--muted);
+  transition:color .3s,background .3s;position:relative;white-space:nowrap;
+}
+.nav-link:hover,.nav-link:focus-visible{color:var(--cream);background:rgba(251,191,36,.09)}
+.header-actions{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.bag-btn{
+  display:flex;align-items:center;gap:9px;padding:8px 13px;border-radius:999px;
+  border:1px solid var(--line);background:rgba(251,191,36,.055);
+  font-size:.76rem;color:var(--cream);transition:border-color .3s,background .3s,transform .3s;
+}
+.bag-btn:hover{border-color:var(--line-strong, rgba(251,191,36,.4));background:rgba(251,191,36,.11);transform:translateY(-1px)}
+.bag-btn svg{width:17px;height:17px;color:var(--gold-soft)}
+.bag-count{
+  min-width:20px;height:20px;padding:0 5px;border-radius:999px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--gold),var(--amber-2));color:#221204;
+  font-size:.64rem;font-weight:800;line-height:1;
+}
+.menu-btn{
+  display:none;width:42px;height:42px;border-radius:50%;place-items:center;
+  border:1px solid var(--line);background:rgba(251,191,36,.055);
+}
+.menu-btn span{display:block;width:16px;height:1.5px;background:var(--cream);margin:3px auto;transition:transform .3s,opacity .3s}
+.menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-4.5px) rotate(-45deg)}
+.mobile-menu{
+  position:fixed;top:calc(var(--header-h) + 8px);left:12px;right:12px;z-index:118;
+  display:none;flex-direction:column;gap:4px;padding:12px;border-radius:20px;
+  background:rgba(18,11,5,.96);border:1px solid rgba(253,230,138,.16);
+  box-shadow:0 30px 80px rgba(0,0,0,.6);backdrop-filter:blur(22px);
+  opacity:0;visibility:hidden;transform:translateY(-8px);
+  transition:opacity .3s,transform .3s,visibility .3s;
+}
+.mobile-menu.is-open{opacity:1;visibility:visible;transform:none}
+.mobile-menu .nav-link{padding:12px 14px;font-size:.9rem;border-radius:12px;text-align:right}
+@media (max-width:860px){
+  .header-nav{display:none}
+  .menu-btn{display:block}
+  .mobile-menu{display:flex}
+  .bag-btn .bag-label{display:none}
+  .bag-btn{padding:8px 10px}
+}
+@media (max-width:440px){
+  .brand-latin{display:none}
+  .brand-name{font-size:1rem}
+  .brand-mark{width:34px;height:34px}
+}
+
+/* ---------- story overlays ---------- */
+.journey{height:820vh;position:relative;z-index:1}
+.story{
+  position:fixed;inset:0;z-index:10;pointer-events:none;
+  display:grid;place-items:center;padding:calc(var(--header-h) + 30px) clamp(18px,5vw,72px) 80px;
+}
+.phase{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:inherit;opacity:0;will-change:opacity,transform,filter;
+  transform:translateZ(0);backface-visibility:hidden;
+}
+.phase-ghost{
+  position:absolute;z-index:-1;top:50%;left:50%;transform:translate(-50%,-54%);
+  font-size:min(38vw,470px);font-weight:900;line-height:1;letter-spacing:-.02em;
+  color:transparent;-webkit-text-stroke:1px rgba(251,191,36,.075);
+  user-select:none;pointer-events:none;
+}
+.phase .eyebrow{margin-bottom:clamp(16px,3vh,26px)}
+.phase-title{
+  font-size:clamp(2.55rem,6.3vw,5.9rem);font-weight:800;line-height:1.5;
+  max-width:15ch;text-wrap:balance;text-shadow:0 2px 5px rgba(0,0,0,.5),0 22px 70px rgba(0,0,0,.6);
+}
+.phase-title em{
+  font-style:normal;
+  background:linear-gradient(180deg,#fffdf5 4%,#fde68a 38%,#f1ac2b 70%,#b45309 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.55)) drop-shadow(0 10px 26px rgba(0,0,0,.45));
+}
+.phase-sub{
+  margin-top:clamp(18px,3.4vh,32px);color:rgba(253,246,231,.62);
+  font-size:clamp(.82rem,1.35vw,1rem);display:flex;align-items:center;gap:12px;font-weight:300;
+}
+.phase-sub::before,.phase-sub::after{content:'';width:26px;height:1px;background:linear-gradient(90deg,transparent,rgba(251,191,36,.55))}
+.phase-sub::after{transform:scaleX(-1)}
+.phase--right{text-align:right;align-items:flex-start;padding-right:clamp(24px,8.5vw,150px)}
+.phase--right .phase-title{max-width:17ch}
+.phase--right .phase-sub::after{display:none}
+.phase-line{width:74px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:clamp(16px,2.6vh,24px);opacity:.75}
+.phase--mini .phase-title{font-size:clamp(1.7rem,3.4vw,3rem);max-width:22ch;font-weight:600;line-height:1.7}
+.phase--mini .eyebrow{margin-bottom:14px}
+@media (max-width:760px){
+  .phase--right{align-items:center;text-align:center;padding-right:clamp(18px,5vw,40px)}
+  .phase--right .phase-sub::after{display:block}
+  .phase-line{display:none}
+  .phase-ghost{font-size:55vw}
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;padding:6px 13px;border-radius:999px;
+  border:1px solid rgba(253,230,138,.18);background:rgba(18,11,5,.34);
+  font-size:.68rem;font-weight:500;color:var(--gold-soft);white-space:nowrap;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+}
+.eyebrow .hex-dot{
+  width:7px;height:7px;flex:none;background:var(--amber);
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  box-shadow:0 0 10px rgba(245,158,11,.7);
+}
+.scroll-hint{
+  position:fixed;bottom:clamp(16px,3.6vh,30px);left:50%;transform:translateX(-50%);
+  z-index:11;display:flex;flex-direction:column;align-items:center;gap:8px;
+  color:rgba(253,246,231,.45);font-size:.62rem;pointer-events:none;
+  transition:opacity .5s ease;letter-spacing:0;
+}
+.scroll-hint .track{width:1px;height:42px;background:rgba(251,191,36,.16);position:relative;overflow:hidden}
+.scroll-hint .track::after{content:'';position:absolute;left:0;top:-45%;width:100%;height:42%;background:linear-gradient(var(--gold),transparent);animation:scrollDot 2.4s var(--ease-soft) infinite}
+@keyframes scrollDot{0%{top:-45%}65%,100%{top:115%}}
+.stage-meter{
+  position:fixed;left:clamp(16px,2.8vw,34px);bottom:clamp(16px,3.6vh,30px);z-index:11;
+  display:flex;align-items:center;gap:10px;font-size:.6rem;color:var(--muted-2);
+  pointer-events:none;transition:opacity .4s ease;
+}
+.stage-meter .bar{width:34px;height:1px;background:rgba(251,191,36,.2);position:relative;overflow:hidden}
+.stage-meter .bar::after{content:'';position:absolute;inset:0;background:var(--gold);transform:scaleX(var(--tunnel-progress,0));transform-origin:right;transition:transform .15s linear}
+.stage-meter b{font-weight:600;color:rgba(253,246,231,.65)}
+@media (max-width:760px){.stage-meter{display:none}}
+
+/* ---------- showcase (fixed over the 3D sanctuary) ---------- */
+.showcase{
+  position:fixed;inset:0;z-index:40;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:calc(var(--header-h) + 18px) clamp(12px,3.4vw,44px) clamp(14px,3vh,30px);
+  pointer-events:none;opacity:0;visibility:hidden;
+  transform:translateY(46px) scale(.988);
+  transition:opacity .9s var(--ease),transform 1.1s var(--ease),visibility .9s;
+}
+.showcase.is-visible{opacity:1;visibility:visible;transform:none}
+.showcase::before{
+  content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse 72% 62% at 50% 50%,rgba(8,4,1,.52),rgba(8,4,1,.24) 58%,transparent 82%);
+  opacity:0;transition:opacity 1s ease;
+}
+.showcase.is-visible::before{opacity:1}
+.glass-card{
+  position:relative;width:min(1160px,96vw);pointer-events:auto;isolation:isolate;
+  display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(16px,2.6vw,38px);
+  padding:clamp(18px,2.6vw,34px);border-radius:clamp(22px,3vw,34px);
+  border:1px solid rgba(253,230,138,.17);
+  background:
+    linear-gradient(133deg,rgba(62,38,13,.82),rgba(15,9,4,.92) 52%,rgba(34,20,8,.88));
+  box-shadow:var(--shadow),inset 0 1px 0 rgba(255,244,211,.16),inset 0 -1px 0 rgba(0,0,0,.4);
+  backdrop-filter:blur(30px) saturate(125%);-webkit-backdrop-filter:blur(30px) saturate(125%);
+}
+.glass-card::before{
+  content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='64' viewBox='0 0 56 64'%3E%3Cpath d='M28 1 54 16v32L28 63 2 48V16L28 1Z' fill='none' stroke='%23fbbf24' stroke-width='1.1'/%3E%3C/svg%3E");
+  background-size:56px 64px;
+}
+.glass-card::after{
+  content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 12% -8%,rgba(253,230,138,.15),transparent 42%),
+    radial-gradient(ellipse at 88% 112%,rgba(180,83,9,.17),transparent 48%);
+}
+.glass-edge{position:absolute;top:0;left:9%;right:9%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,244,211,.45),transparent);pointer-events:none}
+
+.info-col{position:relative;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.prod-copy{position:relative;display:flex;flex-direction:column;min-width:0}
+.prod-copy.is-swapping{animation:prodSwap .55s var(--ease)}
+@keyframes prodSwap{0%{opacity:.25;transform:translateY(9px);filter:blur(3px)}100%{opacity:1;transform:none;filter:none}}
+.prod-kicker{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:clamp(8px,1.5vh,13px)}
+.kicker-label{font-size:.65rem;color:var(--muted-2);display:inline-flex;align-items:center;gap:8px}
+.kicker-label::before{content:'';width:16px;height:1px;background:rgba(251,191,36,.5)}
+.prod-index{font-size:.68rem;color:var(--muted-2);letter-spacing:0;direction:ltr;display:flex;align-items:center;gap:6px}
+.prod-index strong{font-size:.92rem;font-weight:700;color:var(--gold-soft)}
+.prod-name{
+  font-size:clamp(1.75rem,3.15vw,2.75rem);font-weight:800;line-height:1.5;
+  color:var(--cream);text-wrap:balance;
+}
+.prod-note{
+  margin-top:clamp(6px,1.2vh,11px);font-size:clamp(.76rem,1.1vw,.86rem);
+  color:rgba(253,246,231,.58);line-height:1.95;max-width:46ch;
+}
+.prod-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:clamp(10px,1.8vh,17px) 0}
+.meta-cell{
+  display:flex;flex-direction:column;gap:2px;padding:8px 12px;border-radius:12px;
+  border:1px solid rgba(253,230,138,.1);background:rgba(255,255,255,.022);
+}
+.meta-cell span{font-size:.6rem;color:var(--muted-2)}
+.meta-cell strong{font-size:.82rem;font-weight:600;color:var(--cream)}
+.prod-props{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:clamp(10px,1.8vh,18px)}
+.prod-props li{
+  display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;
+  border:1px solid rgba(251,191,36,.13);background:rgba(251,191,36,.065);
+  font-size:.7rem;color:#f8e5bd;line-height:1.7;
+}
+.prod-props li::before{content:'';width:4px;height:4px;flex:none;background:var(--amber);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.buy-row{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:14px;
+  border-top:1px solid rgba(253,230,138,.11);padding-top:clamp(10px,1.8vh,16px);
+}
+.weight-switch{display:flex;gap:3px;padding:3px;border-radius:11px;background:rgba(0,0,0,.26);border:1px solid rgba(253,230,138,.11)}
+.weight-btn{
+  padding:7px 12px;border-radius:8px;font-size:.71rem;color:var(--muted);white-space:nowrap;
+  transition:background .3s,color .3s,box-shadow .3s;
+}
+.weight-btn:hover{color:var(--cream)}
+.weight-btn.is-active{
+  background:linear-gradient(135deg,#fde68a,#fbbf24 46%,#d97706);
+  color:#261605;font-weight:700;box-shadow:0 4px 16px rgba(245,158,11,.22);
+}
+.price-block{display:flex;flex-direction:column;align-items:flex-start;gap:0;margin-inline-start:auto;text-align:left}
+.price-block small{font-size:.6rem;color:var(--muted-2)}
+.price-line{display:flex;align-items:baseline;gap:5px;direction:rtl}
+.price-value{font-size:clamp(1.1rem,1.9vw,1.5rem);font-weight:800;color:var(--gold-soft);line-height:1.35}
+.price-value.is-ticking{animation:priceTick .45s var(--ease)}
+@keyframes priceTick{0%{opacity:.25;transform:translateY(6px)}100%{opacity:1;transform:none}}
+.price-unit{font-size:.62rem;color:var(--muted-2)}
+.cta-row{margin-top:clamp(10px,1.8vh,16px)}
+.btn-primary{
+  position:relative;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:12px 22px;border-radius:13px;overflow:hidden;
+  background:linear-gradient(135deg,#fef3c7,#fbbf24 44%,#d97706);
+  color:#241305;font-size:.85rem;font-weight:800;
+  box-shadow:0 12px 34px rgba(245,158,11,.24),inset 0 1px 0 rgba(255,255,255,.55);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+}
+.btn-primary svg{width:17px;height:17px;transition:transform .35s var(--ease)}
+.btn-primary::after{
+  content:'';position:absolute;top:0;bottom:0;width:45%;left:-60%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-22deg);transition:left .7s var(--ease);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(245,158,11,.34),inset 0 1px 0 rgba(255,255,255,.6)}
+.btn-primary:hover::after{left:120%}
+.btn-primary:hover svg{transform:translateX(-4px)}
+.cta-note{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:8px;font-size:.6rem;color:var(--muted-2)}
+.cta-note svg{width:13px;height:13px;color:var(--amber)}
+.varieties{grid-column:1 / -1;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;position:relative;padding-top:12px;border-top:1px solid rgba(253,230,138,.1)}
+.stage-line{position:absolute;top:-1px;left:0;right:0;height:1px;overflow:hidden;pointer-events:none}
+.stage-line span{display:block;height:100%;background:linear-gradient(90deg,var(--amber-2),var(--gold));transform:scaleX(0);transform-origin:right center;transition:transform .15s linear;box-shadow:0 0 10px rgba(251,191,36,.5)}
+.variety{
+  display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:11px;border:1px solid transparent;
+  text-align:right;transition:background .3s,border-color .3s;min-width:0;
+}
+.variety:hover{background:rgba(251,191,36,.06)}
+.variety.is-active{background:rgba(251,191,36,.085);border-color:rgba(251,191,36,.2)}
+.variety-thumb{
+  width:36px;height:36px;flex:none;border-radius:50%;overflow:hidden;position:relative;
+  border:1px solid rgba(253,230,138,.15);background:#0c0703;
+  transition:border-color .3s,box-shadow .3s;
+}
+.variety.is-active .variety-thumb{border-color:rgba(251,191,36,.65);box-shadow:0 0 18px rgba(245,158,11,.25)}
+.variety-thumb img{width:100%;height:100%;object-fit:cover;transform:scale(1.65);mix-blend-mode:lighten;filter:saturate(1.1)}
+.variety-name{display:flex;flex-direction:column;min-width:0;gap:0;line-height:1.45}
+.variety-name strong{font-size:.72rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.variety-name span{font-size:.58rem;color:var(--muted-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.variety.is-active .variety-name strong{color:var(--gold-soft)}
+
+.jar-column{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:clamp(300px,44vh,442px)}
+.jar-stage{position:relative;width:min(100%,410px);aspect-ratio:1;display:grid;place-items:center;perspective:900px}
+.jar-halo{
+  position:absolute;width:118%;aspect-ratio:1;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,rgba(245,158,11,.34),rgba(245,158,11,.09) 36%,transparent 66%);
+  filter:blur(6px);animation:breathe 7s ease-in-out infinite;
+}
+@keyframes breathe{0%,100%{opacity:.72;transform:scale(.97)}50%{opacity:1;transform:scale(1.04)}}
+.jar-ring{position:absolute;border-radius:50%;pointer-events:none;border:1px solid rgba(253,230,138,.13);width:88%;aspect-ratio:1}
+.jar-ring.r2{width:72%;border-style:dashed;border-color:rgba(251,191,36,.18);animation:spin 54s linear infinite}
+.jar-ring.r3{width:104%;border-style:dotted;border-color:rgba(251,191,36,.09);animation:spinRev 80s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinRev{to{transform:rotate(-360deg)}}
+.jar-hex{position:absolute;width:82%;height:94%;color:rgba(251,191,36,.17);pointer-events:none}
+.jar-badge{
+  position:absolute;top:5%;right:-1%;z-index:3;display:flex;align-items:center;gap:6px;
+  padding:5px 10px;border-radius:999px;background:rgba(18,11,5,.52);
+  border:1px solid rgba(253,230,138,.19);backdrop-filter:blur(10px);
+  font-size:.58rem;color:var(--gold-soft);animation:floatY 6s ease-in-out infinite;
+}
+.jar-badge::before{content:'';width:5px;height:5px;background:var(--gold);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);box-shadow:0 0 8px var(--gold)}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.jar-imgs{position:absolute;inset:4% 2%;z-index:2;transform-style:preserve-3d}
+.jar-img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:contain;
+  opacity:0;transform:scale(.94) translateY(12px);
+  transition:opacity .85s var(--ease),transform 1.1s var(--ease);
+  mix-blend-mode:lighten;filter:saturate(1.06) contrast(1.02);
+  -webkit-mask-image:radial-gradient(ellipse 68% 68% at 50% 50%,#000 52%,transparent 78%);
+  mask-image:radial-gradient(ellipse 68% 68% at 50% 50%,#000 52%,transparent 78%);
+  will-change:opacity,transform;
+}
+.jar-img.is-active{opacity:1;transform:scale(1) translateY(0)}
+.jar-caption{display:flex;align-items:center;gap:8px;font-size:.6rem;color:var(--muted-2);margin-top:2px}
+.jar-caption b{font-weight:600;color:var(--muted);font-size:.66rem}
+.jar-caption i{width:3px;height:3px;border-radius:50%;background:var(--muted-2);display:block}
+
+/* height-based compaction for laptops */
+@media (min-width:901px) and (max-height:790px){
+  .glass-card{padding:20px 26px;gap:20px}
+  .jar-column{min-height:290px}
+  .jar-stage{width:min(100%,330px)}
+  .prod-name{font-size:2rem}
+  .buy-row{padding-top:9px}
+  .cta-note{display:none}
+  .varieties{padding-top:8px}
+  .prod-meta{margin:9px 0}
+  .prod-props{margin-bottom:9px}
+}
+@media (min-width:901px) and (max-height:700px){
+  .prod-note{display:none}
+}
+@media (min-width:901px) and (max-height:660px){
+  .jar-column{min-height:240px}
+  .jar-stage{width:min(100%,270px)}
+  .prod-props li{font-size:.62rem;padding:4px 8px}
+  .meta-cell{padding:6px 10px}
+  .prod-name{font-size:1.75rem}
+  .prod-kicker{margin-bottom:5px}
+}
+
+/* showcase mobile */
+@media (max-width:900px){
+  .showcase{padding:calc(var(--header-h) + 10px) 12px 12px}
+  .glass-card{grid-template-columns:1fr;gap:8px;padding:16px;width:min(560px,96vw);max-height:calc(100dvh - var(--header-h) - 22px)}
+  .jar-column{order:-1;min-height:0}
+  .jar-stage{width:clamp(140px,23vh,205px);height:clamp(140px,23vh,205px)}
+  .jar-badge{top:0;right:0;font-size:.52rem;padding:4px 8px}
+  .jar-caption{display:none}
+  .prod-kicker{margin-bottom:6px}
+  .prod-name{font-size:clamp(1.45rem,4.6vw,1.95rem);line-height:1.5}
+  .prod-note{font-size:.72rem;line-height:1.8;margin-top:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .prod-meta{margin:8px 0;gap:6px}
+  .meta-cell{padding:6px 10px}
+  .meta-cell strong{font-size:.75rem}
+  .prod-props{gap:5px;margin-bottom:9px}
+  .prod-props li{font-size:.63rem;padding:4px 8px}
+  .buy-row{padding-top:8px;gap:10px}
+  .weight-btn{padding:6px 10px;font-size:.66rem}
+  .price-value{font-size:1.1rem}
+  .cta-row{margin-top:8px}
+  .btn-primary{padding:11px 18px;font-size:.8rem}
+  .cta-note{display:none}
+  .varieties{padding-top:8px;gap:2px}
+  .variety{padding:4px;gap:5px}
+  .variety-thumb{width:28px;height:28px}
+  .variety-name strong{font-size:.61rem}
+  .variety-name span{font-size:.5rem}
+  .glass-edge{left:6%;right:6%}
+}
+@media (max-width:900px) and (max-height:620px){
+  .jar-stage{width:clamp(96px,16vh,140px);height:clamp(96px,16vh,140px)}
+  .prod-note{display:none}
+  .prod-props{display:none}
+  .prod-meta{margin:6px 0}
+  .prod-name{font-size:1.35rem}
+  .weight-btn{padding:5px 8px}
+  .btn-primary{padding:9px 16px}
+  .prod-kicker{margin-bottom:3px}
+  .varieties{padding-top:6px}
+}
+@media (max-width:440px){
+  .variety{flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:5px 3px;text-align:center}
+  .variety-thumb{width:30px;height:30px}
+  .variety-name{width:100%;align-items:center;gap:0}
+  .variety-name strong{font-size:.65rem}
+  .variety-name span{font-size:.53rem}
+}
+@media (max-width:440px) and (max-height:700px){
+  .variety-name{display:none}
+  .variety{padding:3px;gap:0}
+  .varieties{padding-top:6px}
+}
+@media (max-width:380px){
+  .variety-name span{display:none}
+  .variety-thumb{width:28px;height:28px}
+  .variety{gap:4px;padding:3px}
+}
+
+/* ---------- post-journey editorial sections ---------- */
+.section{position:relative;z-index:30;padding:clamp(70px,11vh,130px) clamp(18px,5vw,80px);background:#0f0803}
+.section-inner{max-width:1260px;margin:0 auto}
+.collection{
+  border-radius:clamp(28px,4vw,56px) clamp(28px,4vw,56px) 0 0;
+  border-top:1px solid rgba(251,191,36,.14);
+  box-shadow:0 -50px 140px rgba(0,0,0,.55);
+  background:
+    radial-gradient(ellipse at 82% -4%,rgba(245,158,11,.1),transparent 48%),
+    radial-gradient(ellipse at 6% 70%,rgba(217,119,6,.055),transparent 52%),
+    #0f0803;
+  scroll-margin-top:80px;
+}
+.section-head{max-width:740px;margin-bottom:clamp(32px,5.5vh,58px)}
+.section-head h2{font-size:clamp(1.95rem,4.2vw,3.35rem);font-weight:800;line-height:1.55;margin:16px 0 10px;text-wrap:balance}
+.section-head h2 em{font-style:normal;color:var(--gold-soft)}
+.section-head p{color:var(--muted);font-size:clamp(.86rem,1.2vw,1rem);line-height:1.95;max-width:62ch}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,22px)}
+.honey-card{
+  position:relative;display:flex;flex-direction:column;border-radius:24px;overflow:hidden;isolation:isolate;
+  background:linear-gradient(168deg,rgba(55,33,12,.58),rgba(15,9,4,.88));
+  border:1px solid rgba(253,230,138,.12);
+  transition:transform .55s var(--ease),border-color .45s,box-shadow .55s;
+}
+.honey-card::before{
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(circle at 50% 8%,color-mix(in srgb,var(--tone) 20%,transparent),transparent 63%);
+}
+.honey-card:hover,.honey-card:focus-within{transform:translateY(-8px);border-color:rgba(251,191,36,.3);box-shadow:0 34px 80px rgba(0,0,0,.5)}
+.card-media{
+  position:relative;aspect-ratio:1.03;overflow:hidden;margin:9px 9px 0;border-radius:17px;
+  background:radial-gradient(circle at 50% 55%,rgba(245,158,11,.14),rgba(8,4,2,.66) 70%);
+}
+.card-media::after{content:'';position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(180deg,transparent 58%,rgba(8,4,2,.55))}
+.card-media img{width:100%;height:100%;object-fit:cover;mix-blend-mode:lighten;filter:saturate(1.08);transition:transform .9s var(--ease)}
+.honey-card:hover .card-media img{transform:scale(1.065)}
+.card-tag{
+  position:absolute;top:10px;right:10px;z-index:2;font-size:.57rem;color:var(--gold-soft);
+  padding:4px 8px;border-radius:999px;background:rgba(10,6,2,.56);border:1px solid rgba(253,230,138,.18);
+  backdrop-filter:blur(8px);
+}
+.card-sucrose{position:absolute;bottom:10px;right:10px;z-index:2;font-size:.56rem;color:var(--muted);padding:3px 7px;border-radius:6px;background:rgba(8,4,2,.55);border:1px solid rgba(253,230,138,.1)}
+.card-body{padding:13px 16px 16px;display:flex;flex-direction:column;gap:7px;flex:1}
+.card-body h3{font-size:1rem;font-weight:700;line-height:1.65;color:var(--cream)}
+.card-region{display:flex;align-items:center;gap:6px;font-size:.69rem;color:var(--muted)}
+.card-region::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--tone);box-shadow:0 0 8px var(--tone)}
+.card-props{
+  font-size:.65rem;color:rgba(253,246,231,.47);line-height:1.9;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em;
+}
+.card-buy{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:11px;margin-top:auto;border-top:1px solid rgba(253,230,138,.08)}
+.card-price{font-size:.82rem;font-weight:700;color:var(--gold-soft);white-space:nowrap}
+.card-price small{font-size:.55rem;font-weight:400;color:var(--muted-2);margin-left:3px}
+.mini-btn{
+  padding:6px 11px;border-radius:8px;border:1px solid rgba(253,230,138,.2);
+  background:rgba(251,191,36,.055);color:var(--gold-soft);font-size:.63rem;white-space:nowrap;
+  transition:background .3s,color .3s,border-color .3s,transform .3s;
+}
+.mini-btn:hover{background:var(--gold);color:#221204;border-color:var(--gold);transform:translateY(-1px)}
+@media (max-width:1080px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){
+  .section{padding-left:16px;padding-right:16px}
+  .product-grid{grid-template-columns:1fr;gap:14px}
+  .honey-card{flex-direction:row;border-radius:20px}
+  .card-media{width:42%;flex:none;aspect-ratio:1;margin:8px 0 8px 8px}
+  .card-body{padding:14px 8px 14px 14px;min-width:0}
+  .card-props{min-height:0}
+  .card-buy{border-top:0;padding-top:4px;flex-wrap:wrap;row-gap:6px;gap:4px}
+  .mini-btn{padding:6px 9px}
+}
+
+.quote-band{
+  position:relative;z-index:30;background:#0f0803;
+  padding:clamp(16px,2.6vh,30px) clamp(20px,5vw,80px) clamp(44px,7vh,76px);
+  display:flex;flex-direction:column;align-items:center;gap:22px;
+}
+.quote-rule{width:min(560px,70%);height:1px;background:linear-gradient(90deg,transparent,rgba(251,191,36,.28),transparent);position:relative}
+.quote-rule::after{content:'';position:absolute;left:50%;top:50%;width:7px;height:7px;transform:translate(-50%,-50%) rotate(45deg);background:var(--amber-2);box-shadow:0 0 12px rgba(245,158,11,.55)}
+.quote-band blockquote{margin:0;max-width:860px;text-align:center;font-size:clamp(1.14rem,2.4vw,1.9rem);font-weight:500;line-height:1.95;color:rgba(253,246,231,.88);text-wrap:balance}
+.quote-band blockquote em{font-style:normal;color:var(--gold-soft)}
+.quote-band cite{font-style:normal;font-size:.62rem;color:var(--muted-2)}
+
+.quality{
+  scroll-margin-top:80px;
+  background:
+    radial-gradient(ellipse at 78% 12%,rgba(245,158,11,.075),transparent 46%),
+    radial-gradient(ellipse at 12% 88%,rgba(180,83,9,.055),transparent 50%),
+    #0c0602;
+  border-top:1px solid rgba(251,191,36,.06);
+}
+.quality-shell{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(30px,5vw,72px);align-items:start}
+.quality-intro h2{font-size:clamp(1.9rem,4vw,3.2rem);font-weight:800;line-height:1.55;margin:16px 0 12px;text-wrap:balance}
+.quality-intro h2 em{font-style:normal;color:var(--gold-soft)}
+.quality-intro p{color:var(--muted);font-size:clamp(.85rem,1.2vw,1rem);line-height:2;max-width:46ch}
+.quality-stats{display:flex;gap:clamp(18px,3vw,34px);margin-top:clamp(20px,3.5vh,34px);flex-wrap:wrap}
+.stat strong{display:block;font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:800;color:var(--gold-soft);line-height:1.3}
+.stat span{font-size:.64rem;color:var(--muted-2)}
+.quality-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.q-card{
+  position:relative;overflow:hidden;padding:clamp(16px,2.4vw,24px);border-radius:19px;
+  border:1px solid rgba(253,230,138,.1);
+  background:linear-gradient(155deg,rgba(52,31,12,.42),rgba(14,8,4,.52));
+  transition:border-color .4s,transform .4s var(--ease),background .4s;
+}
+.q-card:hover{border-color:rgba(251,191,36,.25);transform:translateY(-4px);background:linear-gradient(155deg,rgba(67,40,15,.48),rgba(14,8,4,.54))}
+.q-num{font-size:2.15rem;font-weight:800;line-height:1;color:rgba(251,191,36,.15);letter-spacing:-.02em}
+.q-card h3{font-size:.94rem;font-weight:700;margin:15px 0 7px;color:var(--cream)}
+.q-card p{font-size:.71rem;line-height:1.95;color:var(--muted)}
+.q-icon{position:absolute;top:16px;left:16px;width:26px;height:26px;color:rgba(251,191,36,.35)}
+@media (max-width:900px){
+  .quality-shell{grid-template-columns:1fr;gap:28px}
+  .quality-intro{position:static}
+  .quality-stats{gap:22px}
+}
+@media (max-width:560px){.quality-grid{grid-template-columns:1fr}}
+
+.final-cta{
+  position:relative;z-index:30;overflow:hidden;
+  padding:clamp(50px,8vh,90px) clamp(20px,5vw,80px);
+  background:
+    radial-gradient(ellipse at 50% 120%,rgba(245,158,11,.17),transparent 58%),
+    #0c0602;
+  border-top:1px solid rgba(251,191,36,.07);
+  text-align:center;
+}
+.final-cta::before{
+  content:'';position:absolute;left:50%;top:50%;width:min(760px,90vw);aspect-ratio:1;
+  transform:translate(-50%,-50%);pointer-events:none;opacity:.16;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='64' viewBox='0 0 56 64'%3E%3Cpath d='M28 1 54 16v32L28 63 2 48V16L28 1Z' fill='none' stroke='%23fbbf24' stroke-width='1.1'/%3E%3C/svg%3E");
+  background-size:56px 64px;
+  mask-image:radial-gradient(circle,#000,transparent 68%);
+  -webkit-mask-image:radial-gradient(circle,#000,transparent 68%);
+}
+.final-cta-inner{position:relative;max-width:720px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px}
+.final-cta h2{font-size:clamp(1.8rem,3.6vw,2.9rem);font-weight:800;line-height:1.6}
+.final-cta p{font-size:.82rem;line-height:2;color:var(--muted);max-width:50ch}
+.final-cta .btn-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:4px}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:8px;justify-content:center;
+  padding:12px 20px;border-radius:12px;border:1px solid rgba(253,230,138,.24);
+  color:var(--cream);font-size:.8rem;background:rgba(253,230,138,.03);
+  transition:background .3s,border-color .3s,color .3s;
+}
+.btn-outline:hover{background:rgba(253,230,138,.1);border-color:rgba(253,230,138,.45)}
+.btn-outline svg{width:16px;height:16px}
+
+/* ---------- footer ---------- */
+.site-footer{position:relative;z-index:30;background:#070402;border-top:1px solid rgba(251,191,36,.1);padding:clamp(44px,7vh,72px) clamp(20px,5vw,80px) 24px}
+.footer-inner{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:1.4fr .7fr .9fr;gap:clamp(26px,5vw,60px)}
+.footer-brand .brand{margin-bottom:14px}
+.footer-brand p{font-size:.75rem;line-height:2;color:var(--muted);max-width:38ch}
+.footer-socials{display:flex;gap:8px;margin-top:18px}
+.social-btn{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(253,230,138,.14);color:var(--muted);transition:all .3s}
+.social-btn:hover{color:var(--gold-soft);border-color:rgba(253,230,138,.4);background:rgba(251,191,36,.06);transform:translateY(-2px)}
+.social-btn svg{width:16px;height:16px}
+.footer-col h4{font-size:.72rem;font-weight:700;color:var(--gold-soft);margin:4px 0 14px;letter-spacing:0}
+.footer-col ul{display:flex;flex-direction:column;gap:8px}
+.footer-col button,.footer-col a{font-size:.74rem;color:var(--muted);transition:color .25s;text-align:right}
+.footer-col button:hover,.footer-col a:hover{color:var(--cream)}
+.footer-col li{display:flex;align-items:center;gap:7px;font-size:.74rem;color:var(--muted)}
+.footer-col li svg{width:14px;height:14px;color:var(--amber);flex:none}
+.footer-bottom{
+  max-width:1260px;margin:clamp(32px,5vh,50px) auto 0;padding-top:18px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  border-top:1px solid rgba(253,230,138,.08);font-size:.62rem;color:var(--muted-2);
+}
+.footer-bottom .made{display:flex;align-items:center;gap:6px}
+.footer-bottom .made span{color:var(--gold-soft)}
+@media (max-width:900px){.footer-inner{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
+@media (max-width:560px){.footer-inner{grid-template-columns:1fr};.footer-col h4{margin-top:6px}}
+
+/* ---------- bag / drawer ---------- */
+.bag-backdrop{
+  position:fixed;inset:0;z-index:190;background:rgba(5,3,1,.66);
+  backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
+  opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s;
+}
+body.bag-open .bag-backdrop{opacity:1;visibility:visible}
+.bag-drawer{
+  position:fixed;top:0;left:0;bottom:0;z-index:200;width:min(430px,94vw);
+  display:flex;flex-direction:column;
+  background:linear-gradient(158deg,rgba(36,22,9,.985),rgba(11,7,3,.995));
+  border-right:1px solid rgba(251,191,36,.16);
+  box-shadow:50px 0 130px rgba(0,0,0,.65);
+  transform:translateX(-103%);visibility:hidden;
+  transition:transform .65s var(--ease),visibility .65s;
+}
+body.bag-open .bag-drawer{transform:none;visibility:visible}
+.bag-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 20px 16px;border-bottom:1px solid rgba(253,230,138,.1);flex:none}
+.bag-title{display:flex;align-items:center;gap:10px}
+.bag-title svg{width:20px;height:20px;color:var(--gold)}
+.bag-title h2{font-size:1rem;font-weight:700}
+.bag-title span{font-size:.6rem;color:var(--muted-2);display:block;font-weight:400;margin-top:1px}
+.icon-btn{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(253,230,138,.14);color:var(--muted);transition:all .3s}
+.icon-btn:hover{color:var(--cream);border-color:rgba(253,230,138,.35);background:rgba(251,191,36,.06)}
+.icon-btn svg{width:16px;height:16px}
+.bag-body{flex:1;overflow-y:auto;padding:16px 20px;overscroll-behavior:contain;scrollbar-width:thin}
+.bag-empty{min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;padding:30px 10px;color:var(--muted)}
+.bag-empty .empty-icon{width:84px;height:84px;color:rgba(251,191,36,.28);margin-bottom:4px}
+.bag-empty h3{font-size:.92rem;color:var(--cream);font-weight:600}
+.bag-empty p{font-size:.7rem;line-height:1.9;max-width:25ch;color:var(--muted-2)}
+.bag-empty button{margin-top:6px;font-size:.7rem;color:var(--gold-soft);border-bottom:1px solid rgba(251,191,36,.35);padding-bottom:2px}
+.bag-items{display:flex;flex-direction:column;gap:12px}
+.bag-item{display:flex;gap:11px;padding-bottom:12px;border-bottom:1px solid rgba(253,230,138,.07);animation:bagIn .45s var(--ease)}
+@keyframes bagIn{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:none}}
+.bag-thumb{width:62px;height:70px;flex:none;border-radius:10px;overflow:hidden;background:radial-gradient(circle,rgba(245,158,11,.13),#0b0602 70%);border:1px solid rgba(253,230,138,.12)}
+.bag-thumb img{width:100%;height:100%;object-fit:cover;mix-blend-mode:lighten;transform:scale(1.05)}
+.bag-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.bag-info strong{font-size:.78rem;font-weight:600;color:var(--cream);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bag-info > span{font-size:.6rem;color:var(--muted-2)}
+.bag-qty{display:flex;align-items:center;gap:7px;margin-top:7px;width:max-content;border:1px solid rgba(253,230,138,.13);border-radius:7px;padding:2px}
+.bag-qty button{width:22px;height:22px;display:grid;place-items:center;border-radius:5px;color:var(--muted);font-size:.85rem;line-height:1;transition:background .2s,color .2s}
+.bag-qty button:hover{background:rgba(251,191,36,.12);color:var(--gold-soft)}
+.bag-qty span{min-width:17px;text-align:center;font-size:.66rem;color:var(--cream)}
+.bag-item-side{display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;gap:6px;flex:none}
+.bag-item-total{font-size:.68rem;font-weight:700;color:var(--gold-soft);white-space:nowrap}
+.bag-item-total small{font-size:.5rem;font-weight:400;color:var(--muted-2)}
+.bag-remove{font-size:.55rem;color:var(--muted-2);border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.bag-remove:hover{color:#fca5a5;border-color:rgba(252,165,165,.4)}
+.bag-foot{flex:none;padding:16px 20px calc(18px + env(safe-area-inset-bottom));border-top:1px solid rgba(253,230,138,.1);background:rgba(0,0,0,.22)}
+.ship-meter{display:flex;flex-direction:column;gap:6px;margin-bottom:13px}
+.ship-meter .ship-text{display:flex;align-items:center;gap:6px;font-size:.59rem;color:var(--muted)}
+.ship-meter .ship-text svg{width:14px;height:14px;color:var(--amber)}
+.ship-meter .ship-track{height:2px;border-radius:99px;background:rgba(251,191,36,.13);overflow:hidden}
+.ship-meter .ship-track span{display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--amber-2),var(--gold));transition:width .5s var(--ease)}
+.ship-meter.is-free .ship-text{color:var(--gold-soft)}
+.bag-total{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:12px}
+.bag-total > span{font-size:.7rem;color:var(--muted)}
+.bag-total strong{font-size:1.15rem;color:var(--gold-soft);font-weight:800}
+.bag-total strong small{font-size:.58rem;color:var(--muted-2);font-weight:400;margin-right:4px}
+.checkout-btn{
+  width:100%;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:12px;
+  background:linear-gradient(135deg,#fde68a,#fbbf24 46%,#d97706);color:#241305;
+  font-size:.82rem;font-weight:800;box-shadow:0 10px 30px rgba(245,158,11,.2);
+  transition:transform .3s,box-shadow .3s,opacity .3s;
+}
+.checkout-btn:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(245,158,11,.3)}
+.checkout-btn:disabled{opacity:.35;cursor:not-allowed;transform:none;box-shadow:none}
+.bag-note{text-align:center;font-size:.55rem;color:var(--muted-2);margin-top:8px}
+.bag-success{display:none;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;gap:14px;padding:20px}
+.bag-drawer.is-success .bag-success{display:flex}
+.bag-drawer.is-success .bag-body,.bag-drawer.is-success .bag-foot{display:none}
+.success-check{width:74px;height:74px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(251,191,36,.3);background:rgba(251,191,36,.09);color:var(--gold);box-shadow:0 0 40px rgba(245,158,11,.16)}
+.success-check svg{width:30px;height:30px}
+.bag-success h3{font-size:1.1rem;font-weight:700;color:var(--cream)}
+.bag-success p{font-size:.72rem;line-height:1.95;color:var(--muted);max-width:27ch}
+.bag-success .order-code{font-size:.65rem;color:var(--gold-soft);border:1px dashed rgba(251,191,36,.28);border-radius:8px;padding:6px 12px;direction:ltr}
+.bag-success .bag-close-success{margin-top:6px;font-size:.7rem;color:var(--muted);border-bottom:1px solid rgba(251,191,36,.3);padding-bottom:2px}
+body.bag-open{overflow:hidden}
+
+/* ---------- toast ---------- */
+.toast{
+  position:fixed;bottom:clamp(18px,4vh,32px);left:50%;z-index:310;
+  display:flex;align-items:center;gap:9px;padding:11px 17px;border-radius:999px;
+  background:rgba(24,15,7,.94);border:1px solid rgba(251,191,36,.28);
+  color:var(--cream);font-size:.72rem;box-shadow:0 20px 50px rgba(0,0,0,.4);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  transform:translate(-50%,18px);opacity:0;visibility:hidden;
+  transition:opacity .4s var(--ease),transform .4s var(--ease),visibility .4s;
+  max-width:calc(100vw - 32px);text-align:center;
+}
+.toast.is-showing{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.toast svg{width:16px;height:16px;color:var(--gold);flex:none}
+
+/* ---------- reveals / misc ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.reveal.is-in{opacity:1;transform:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+  .reveal{opacity:1;transform:none}
+}
+
+</style>
+</head>
+<body>
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <svg class="loader-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path d="M24 3.5 41 13.2v21.6L24 44.5 7 34.8V13.2L24 3.5Z" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M24 13.5c4 5.5 7 8.8 7 12.4a7 7 0 1 1-14 0c0-3.6 3-6.9 7-12.4Z" fill="currentColor" opacity=".85"/>
+    </svg>
+    <span class="loader-name">عسل ناب</span>
+    <span class="loader-line"></span>
+  </div>
+</div>
+
+<canvas id="webgl" aria-hidden="true"></canvas>
+<div class="fallback" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#top" data-scroll="top" aria-label="عسل ناب، بازگشت به ابتدا">
+    <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path d="M24 3.5 41 13.2v21.6L24 44.5 7 34.8V13.2L24 3.5Z" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M24 13.5c4 5.5 7 8.8 7 12.4a7 7 0 1 1-14 0c0-3.6 3-6.9 7-12.4Z" fill="currentColor" opacity=".88"/>
+    </svg>
+    <span class="brand-copy">
+      <span class="brand-name">عسل ناب</span>
+      <span class="brand-latin">PURE HONEY</span>
+    </span>
+  </a>
+
+  <nav class="header-nav" aria-label="ناوبری اصلی">
+    <button class="nav-link" type="button" data-scroll="top">ورود به کندو</button>
+    <button class="nav-link" type="button" data-scroll="collection">کلکسیون عسل‌ها</button>
+    <button class="nav-link" type="button" data-scroll="quality">ضمانت کیفیت</button>
+  </nav>
+
+  <div class="header-actions">
+    <button class="bag-btn" id="bagBtn" type="button" aria-label="باز کردن سبد خرید" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 7h12l1.2 13H4.8L6 7Z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/>
+      </svg>
+      <span class="bag-label">سبد</span>
+      <span class="bag-count" id="bagCount">۰</span>
+    </button>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="منوی بیشتر" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <button class="nav-link" type="button" data-scroll="top">ورود به کندو</button>
+  <button class="nav-link" type="button" data-scroll="collection">کلکسیون عسل‌ها</button>
+  <button class="nav-link" type="button" data-scroll="quality">ضمانت کیفیت</button>
+  <button class="nav-link" type="button" data-scroll="footer">تماس با ما</button>
+</div>
+
+<main id="top">
+  <section class="journey" id="journey" aria-label="سفر سینمایی به کندوی عسل">
+    <div class="story" id="story">
+      <div class="phase" id="phase1">
+        <span class="phase-ghost" aria-hidden="true">۰۱</span>
+        <span class="eyebrow"><i class="hex-dot"></i> فصل اول · کندوی طلایی</span>
+        <h1 class="phase-title">سفری به قلب <em>طلایی طبیعت</em></h1>
+        <p class="phase-sub">اسکرول کنید تا وارد کندو شوید</p>
+      </div>
+
+      <div class="phase phase--right" id="phase2">
+        <span class="phase-ghost" aria-hidden="true">۰۲</span>
+        <span class="phase-line" aria-hidden="true"></span>
+        <span class="eyebrow"><i class="hex-dot"></i> فصل دوم · ارتفاعات بکر</span>
+        <h2 class="phase-title">هر قطره، عصاره <em>هزاران گل وحشی</em></h2>
+        <p class="phase-sub">تولید شده در ارتفاعات بکر، بدون دخالت حرارت</p>
+      </div>
+
+      <div class="phase phase--mini" id="phase3">
+        <span class="eyebrow"><i class="hex-dot"></i> و اینک · روشنای شهد</span>
+        <h2 class="phase-title">از دل کندو، به <em>روشنای شهد</em></h2>
+      </div>
+    </div>
+
+    <div class="scroll-hint" id="scrollHint" aria-hidden="true">
+      <span>اسکرول</span>
+      <span class="track"></span>
+    </div>
+
+    <div class="stage-meter" id="stageMeter" aria-hidden="true">
+      <span id="stageMeterText">فصل ۰۱ · کندوی طلایی</span>
+      <span class="bar"></span>
+      <b id="stageMeterPercent">۰٪</b>
+    </div>
+  </section>
+
+  <!-- sanctuary product showcase (fixed over WebGL) -->
+  <section class="showcase" id="showcase" aria-hidden="true" aria-label="کلکسیون عسل ناب" inert>
+    <div class="glass-card" id="glassCard">
+      <span class="glass-edge" aria-hidden="true"></span>
+
+      <div class="info-col">
+        <div class="prod-copy" id="prodCopy" aria-live="polite">
+          <div class="prod-kicker">
+            <span class="kicker-label">کلکسیون عسل ناب</span>
+            <span class="prod-index" aria-hidden="true"><strong id="prodIndex">۰۱</strong><span>/ ۰۴</span></span>
+          </div>
+          <h2 class="prod-name" id="prodName">عسل گون کوهستان</h2>
+          <p class="prod-note" id="prodNote">شهدی خام با عطر چوبی و پایانی گرم؛ حاصل کوچ زنبورها در دامنه‌های سبلان.</p>
+          <div class="prod-meta">
+            <div class="meta-cell"><span>منطقه برداشت</span><strong id="prodRegion">زاگرس و سبلان</strong></div>
+            <div class="meta-cell"><span>میزان ساکارز</span><strong id="prodSucrose">زیر ۱٫۸٪</strong></div>
+          </div>
+          <ul class="prod-props" id="prodProps">
+            <li>تقویت سیستم ایمنی</li>
+            <li>تسکین مفاصل</li>
+            <li>انرژی‌بخش طبیعی</li>
+          </ul>
+        </div>
+
+        <div class="buy-row">
+          <div class="weight-switch" role="group" aria-label="انتخاب وزن">
+            <button class="weight-btn is-active" type="button" data-weight="0" aria-pressed="true">۵۰۰ گرم</button>
+            <button class="weight-btn" type="button" data-weight="1" aria-pressed="false">۱ کیلوگرم</button>
+          </div>
+          <div class="price-block">
+            <small>قیمت نهایی</small>
+            <span class="price-line"><strong class="price-value" id="prodPrice">۱٬۲۹۰٬۰۰۰</strong><span class="price-unit">تومان</span></span>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <button class="btn-primary" id="orderBtn" type="button">
+            سفارش آنلاین
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg>
+          </button>
+          <div class="cta-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+            ارسال رایگان برای سفارش‌های بالای ۲ میلیون تومان
+          </div>
+        </div>
+      </div>
+
+      <div class="jar-column">
+        <div class="jar-stage" id="jarStage">
+          <div class="jar-halo" aria-hidden="true"></div>
+          <div class="jar-ring r3" aria-hidden="true"></div>
+          <div class="jar-ring r2" aria-hidden="true"></div>
+          <svg class="jar-hex" viewBox="0 0 200 220" fill="none" aria-hidden="true">
+            <path d="M100 6 190 57v106l-90 51L10 163V57L100 6Z" stroke="currentColor" stroke-width="1"/>
+            <path d="M100 20 178 65v90l-78 45-78-45V65L100 20Z" stroke="currentColor" stroke-width=".5" stroke-dasharray="3 6" opacity=".6"/>
+          </svg>
+          <span class="jar-badge">خام و طبیعی</span>
+          <div class="jar-imgs">
+            <img class="jar-img is-active" src="jar-gon.jpg" alt="شیشه عسل گون کوهستان" width="1024" height="1024" data-jar="0" decoding="async" />
+            <img class="jar-img" src="jar-konar.jpg" alt="شیشه عسل کنار خالص" width="1024" height="1024" data-jar="1" decoding="async" />
+            <img class="jar-img" src="jar-avishan.jpg" alt="شیشه عسل آویشن وحشی" width="1024" height="1024" data-jar="2" decoding="async" />
+            <img class="jar-img" src="jar-baharnarenj.jpg" alt="شیشه عسل بهارنارنج معطر" width="1024" height="1024" data-jar="3" decoding="async" />
+          </div>
+        </div>
+        <div class="jar-caption" aria-hidden="true"><b id="jarCaption">گون کوهستان</b><i></i><span>برداشت ۱۴۰۵</span><i></i><span>تک‌منطقه‌ای</span></div>
+      </div>
+
+      <div class="varieties" role="tablist" aria-label="گونه‌های عسل">
+        <span class="stage-line" aria-hidden="true"><span id="stageLine"></span></span>
+        <button class="variety is-active" type="button" data-index="0" role="tab" aria-selected="true" aria-label="نمایش عسل گون کوهستان">
+          <span class="variety-thumb"><img src="jar-gon.jpg" alt="" width="1024" height="1024" loading="lazy" /></span>
+          <span class="variety-name"><strong>گون کوهستان</strong><span>زاگرس و سبلان</span></span>
+        </button>
+        <button class="variety" type="button" data-index="1" role="tab" aria-selected="false" aria-label="نمایش عسل کنار خالص">
+          <span class="variety-thumb"><img src="jar-konar.jpg" alt="" width="1024" height="1024" loading="lazy" /></span>
+          <span class="variety-name"><strong>کنار خالص</strong><span>دشت‌های جنوبی</span></span>
+        </button>
+        <button class="variety" type="button" data-index="2" role="tab" aria-selected="false" aria-label="نمایش عسل آویشن وحشی">
+          <span class="variety-thumb"><img src="jar-avishan.jpg" alt="" width="1024" height="1024" loading="lazy" /></span>
+          <span class="variety-name"><strong>آویشن وحشی</strong><span>ارتفاعات البرز</span></span>
+        </button>
+        <button class="variety" type="button" data-index="3" role="tab" aria-selected="false" aria-label="نمایش عسل بهارنارنج معطر">
+          <span class="variety-thumb"><img src="jar-baharnarenj.jpg" alt="" width="1024" height="1024" loading="lazy" /></span>
+          <span class="variety-name"><strong>بهارنارنج</strong><span>باغ‌های شمال</span></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ collection ============ -->
+  <section class="section collection" id="collection" aria-labelledby="collectionTitle">
+    <div class="section-inner">
+      <header class="section-head reveal">
+        <span class="eyebrow"><i class="hex-dot"></i> کلکسیون · چهار اقلیم</span>
+        <h2 id="collectionTitle">چهار طعم، چهار <em>اقلیم</em></h2>
+        <p>از مراتع سبلان تا باغ‌های شمال؛ هر شیشه روایتی از یک سرزمین است. عسل‌ها خام، تک‌منطقه‌ای و بدون هیچ افزودنی هستند.</p>
+      </header>
+
+      <div class="product-grid">
+        <article class="honey-card reveal" style="--tone:#e8a23e;--d:.05s">
+          <div class="card-media">
+            <span class="card-tag">خام · بدون حرارت</span>
+            <span class="card-sucrose">ساکارز زیر ۱٫۸٪</span>
+            <img src="jar-gon.jpg" alt="عسل گون کوهستان در شیشه" width="1024" height="1024" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>عسل گون کوهستان</h3>
+            <p class="card-region">زاگرس و سبلان</p>
+            <p class="card-props">تقویت سیستم ایمنی · تسکین مفاصل · انرژی‌بخش طبیعی</p>
+            <div class="card-buy">
+              <span class="card-price"><small>از</small> ۱٬۲۹۰٬۰۰۰ <small>تومان</small></span>
+              <button class="mini-btn js-add" type="button" data-id="gon" data-weight="0">افزودن به سبد</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="honey-card reveal" style="--tone:#b95524;--d:.12s">
+          <div class="card-media">
+            <span class="card-tag">پررنگ · کهربایی</span>
+            <span class="card-sucrose">ساکارز زیر ۲٫۲٪</span>
+            <img src="jar-konar.jpg" alt="عسل کنار خالص در شیشه" width="1024" height="1024" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>عسل کنار خالص</h3>
+            <p class="card-region">دشت‌های جنوبی</p>
+            <p class="card-props">آنتی‌اکسیدان قوی · تقویت قوای جسمانی · گوارش</p>
+            <div class="card-buy">
+              <span class="card-price"><small>از</small> ۹۸۰٬۰۰۰ <small>تومان</small></span>
+              <button class="mini-btn js-add" type="button" data-id="konar" data-weight="0">افزودن به سبد</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="honey-card reveal" style="--tone:#c18a35;--d:.19s">
+          <div class="card-media">
+            <span class="card-tag">معطر · گیاهی</span>
+            <span class="card-sucrose">ساکارز زیر ۱٫۵٪</span>
+            <img src="jar-avishan.jpg" alt="عسل آویشن وحشی در شیشه" width="1024" height="1024" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>عسل آویشن وحشی</h3>
+            <p class="card-region">ارتفاعات البرز</p>
+            <p class="card-props">ضدعفونی‌کننده مجاری تنفسی · ضدسرفه · آرام‌بخش</p>
+            <div class="card-buy">
+              <span class="card-price"><small>از</small> ۱٬۴۵۰٬۰۰۰ <small>تومان</small></span>
+              <button class="mini-btn js-add" type="button" data-id="avishan" data-weight="0">افزودن به سبد</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="honey-card reveal" style="--tone:#e6bd56;--d:.26s">
+          <div class="card-media">
+            <span class="card-tag">گل‌بو · روشن</span>
+            <span class="card-sucrose">ساکارز زیر ۲٫۵٪</span>
+            <img src="jar-baharnarenj.jpg" alt="عسل بهارنارنج معطر در شیشه" width="1024" height="1024" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <h3>عسل بهارنارنج معطر</h3>
+            <p class="card-region">باغ‌های شمال</p>
+            <p class="card-props">نشاط‌آور · ضد استرس · تقویت حافظه</p>
+            <div class="card-buy">
+              <span class="card-price"><small>از</small> ۱٬۱۸۰٬۰۰۰ <small>تومان</small></span>
+              <button class="mini-btn js-add" type="button" data-id="baharnarenj" data-weight="0">افزودن به سبد</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote-band reveal">
+    <span class="quote-rule" aria-hidden="true"></span>
+    <blockquote>«عسل ناب، حاصل <em>مکث طبیعت</em> است؛ نه عجلهٔ ما.»</blockquote>
+    <cite>از دفترچهٔ زنبوردار — ارتفاعات سبلان</cite>
+  </div>
+
+  <!-- ============ quality ============ -->
+  <section class="section quality" id="quality" aria-labelledby="qualityTitle">
+    <div class="quality-shell">
+      <div class="quality-intro reveal">
+        <span class="eyebrow"><i class="hex-dot"></i> ضمانت کیفیت · عسل ناب</span>
+        <h2 id="qualityTitle">خالص، بدون هیچ <em>میانبری</em></h2>
+        <p>ما عسل را نه با گرما و نه با افزودنی شکل نمی‌دهیم. هر بچ از یک زنبورستان مشخص برداشت می‌شود، در آزمایشگاه معتمد آزمون ساکارز می‌دهد و با شمارهٔ بچ روی شیشه به دست شما می‌رسد.</p>
+        <div class="quality-stats">
+          <div class="stat"><strong>۰٪</strong><span>حرارت و پاستوریزاسیون</span></div>
+          <div class="stat"><strong>۱۰۰٪</strong><span>خام و تک‌منطقه‌ای</span></div>
+          <div class="stat"><strong>۷ روز</strong><span>ضمانت بازگشت وجه</span></div>
+        </div>
+      </div>
+
+      <div class="quality-grid">
+        <article class="q-card reveal" style="--d:.05s">
+          <span class="q-num" aria-hidden="true">۰۱</span>
+          <svg class="q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 3v18M5 8c2.5 0 4.5 1.8 7 4 2.5-2.2 4.5-4 7-4M6 18c2 0 4-1.5 6-4 2 2.5 4 4 6 4"/></svg>
+          <h3>بدون حرارت</h3>
+          <p>عسل خام هرگز از دمای طبیعی خود بالاتر نمی‌رود؛ آنزیم‌ها، گرده‌ها و عطر گل‌ها زنده می‌مانند.</p>
+        </article>
+        <article class="q-card reveal" style="--d:.12s">
+          <span class="q-num" aria-hidden="true">۰۲</span>
+          <svg class="q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M9 3h6v4l4 3v11H5V10l4-3V3Z"/><path d="M9 14h6M9 18h6"/></svg>
+          <h3>آزمون ساکارز</h3>
+          <p>هر بچ با آزمایشگاه معتمد و شاخص ساکارز زیر استاندارد ملی تأیید می‌شود؛ نتیجه در برگهٔ اصالت شیشه است.</p>
+        </article>
+        <article class="q-card reveal" style="--d:.19s">
+          <span class="q-num" aria-hidden="true">۰۳</span>
+          <svg class="q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          <h3>برداشت تک‌منطقه‌ای</h3>
+          <p>هیچ شیشه‌ای مخلوط چند منطقه یا عسل وارداتی نیست؛ طعم، رنگ و عطر هر اقلیم دست‌نخورده می‌ماند.</p>
+        </article>
+        <article class="q-card reveal" style="--d:.26s">
+          <span class="q-num" aria-hidden="true">۰۴</span>
+          <svg class="q-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.5 7.6 8 9 4.5-1.4 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.3 2.3 4.7-5"/></svg>
+          <h3>ضمانت بازگشت</h3>
+          <p>اگر طعم، عطر یا اصالت سفارش را نپسندید، تا هفت روز پس از دریافت، بدون پرسش بازمی‌گردانیم.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta" aria-label="دعوت به خرید">
+    <div class="final-cta-inner reveal">
+      <span class="eyebrow"><i class="hex-dot"></i> کندو باز است</span>
+      <h2>کمی از طبیعت را به سفره‌تان بیاورید</h2>
+      <p>سفارش‌ها با بسته‌بندی محافظ و کارت اصالت ارسال می‌شوند. ارسال به سراسر ایران، رایگان برای سفارش‌های بالای دو میلیون تومان.</p>
+      <div class="btn-row">
+        <button class="btn-primary" type="button" data-scroll="collection" style="width:auto;padding:13px 24px">دیدن کلکسیون
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg>
+        </button>
+        <button class="btn-outline" type="button" data-scroll="top">بازگشت به کندو
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m6 6-6-6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="#top" data-scroll="top" aria-label="عسل ناب">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 3.5 41 13.2v21.6L24 44.5 7 34.8V13.2L24 3.5Z" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M24 13.5c4 5.5 7 8.8 7 12.4a7 7 0 1 1-14 0c0-3.6 3-6.9 7-12.4Z" fill="currentColor" opacity=".88"/>
+        </svg>
+        <span class="brand-copy"><span class="brand-name">عسل ناب</span><span class="brand-latin">PURE HONEY</span></span>
+      </a>
+      <p>عسل خام، تک‌منطقه‌ای و بدون حرارت از ارتفاعات بکر ایران. هر شیشه، روایتی از یک اقلیم و یک فصل برداشت است.</p>
+      <div class="footer-socials">
+        <a class="social-btn" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="اینستاگرام عسل ناب">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a class="social-btn" href="https://t.me/" target="_blank" rel="noopener" aria-label="تلگرام عسل ناب">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="m21 4-3 16-6-5-3 3 .5-5L20 6l-11 7-5-2 17-7Z"/></svg>
+        </a>
+        <a class="social-btn" href="mailto:hello@nabehoney.ir" aria-label="ایمیل عسل ناب">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>دسترسی سریع</h4>
+      <ul>
+        <li><button type="button" data-scroll="top">ورود به کندو</button></li>
+        <li><button type="button" data-scroll="collection">کلکسیون عسل‌ها</button></li>
+        <li><button type="button" data-scroll="quality">ضمانت کیفیت</button></li>
+        <li><button type="button" data-open-bag>سبد خرید</button></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>با ما در تماس باشید</h4>
+      <ul>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 3h3l1.5 5L8 10a13 13 0 0 0 6 6l2-2.5 5 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 3.5 4.2 2 2 0 0 1 5.5 3H6Z"/></svg>
+          <a href="tel:+982188881234" dir="ltr">۰۲۱ ۸۸۸۸ ۱۲۳۴</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+          <a href="mailto:hello@nabehoney.ir" dir="ltr">hello@nabehoney.ir</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          <span>تهران، ارسال به سراسر ایران</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© ۱۴۰۵ عسل ناب — تمامی حقوق محفوظ است.</span>
+    <span class="made">دست‌ساز با <span>♥</span> در ایران</span>
+  </div>
+</footer>
+
+<div class="bag-backdrop" id="bagBackdrop"></div>
+
+<aside class="bag-drawer" id="bagDrawer" role="dialog" aria-modal="true" aria-labelledby="bagTitle" aria-hidden="true" inert>
+  <div class="bag-head">
+    <div class="bag-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l1.2 13H4.8L6 7Z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg>
+      <div>
+        <h2 id="bagTitle">سبد خرید</h2>
+        <span id="bagSubtitle">سفارش مستقیم از زنبورستان</span>
+      </div>
+    </div>
+    <button class="icon-btn" id="bagClose" type="button" aria-label="بستن سبد خرید">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+
+  <div class="bag-body">
+    <div class="bag-empty" id="bagEmpty">
+      <svg class="empty-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+        <path d="M32 6 54 19v26L32 58 10 45V19L32 6Z"/>
+        <path d="M32 21c5 6.5 8.5 10.5 8.5 14.8a8.5 8.5 0 1 1-17 0C23.5 31.5 27 27.5 32 21Z" fill="currentColor" opacity=".28" stroke="none"/>
+      </svg>
+      <h3>سبد شما هنوز خالی است</h3>
+      <p>یک شیشه از کلکسیون را انتخاب کنید و طعم طبیعت را به خانه ببرید.</p>
+      <button type="button" data-scroll="collection" data-close-bag>دیدن کلکسیون عسل‌ها</button>
+    </div>
+
+    <ul class="bag-items" id="bagItems"></ul>
+  </div>
+
+  <div class="bag-foot" id="bagFoot" hidden>
+    <div class="ship-meter" id="shipMeter">
+      <div class="ship-text">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+        <span id="shipText">ارسال رایگان برای سفارش‌های بالای ۲ میلیون تومان</span>
+      </div>
+      <div class="ship-track"><span id="shipFill"></span></div>
+    </div>
+    <div class="bag-total"><span>جمع سبد</span><strong><span id="bagTotal">۰</span><small>تومان</small></strong></div>
+    <button class="checkout-btn" id="checkoutBtn" type="button" disabled>تکمیل سفارش
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:16px;height:16px"><path d="M19 12H5m6-6-6 6 6 6"/></svg>
+    </button>
+    <p class="bag-note">پرداخت پس از تأیید موجودی · بسته‌بندی محافظ و کارت اصالت</p>
+  </div>
+
+  <div class="bag-success" id="bagSuccess" aria-live="polite">
+    <span class="success-check">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg>
+    </span>
+    <h3>سفارش شما ثبت شد</h3>
+    <p>جزئیات سفارش برای شما پیامک می‌شود و تیم عسل ناب برای هماهنگی ارسال تماس می‌گیرد.</p>
+    <span class="order-code" id="orderCode">NB-0000</span>
+    <button class="bag-close-success" type="button" id="closeSuccess">بازگشت به فروشگاه</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4.5 12.5 5 5 10-11"/></svg>
+  <span id="toastText">به سبد خرید اضافه شد</span>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* ============================================================
+   عسل ناب — app
+   ============================================================ */
+(() => {
+  'use strict';
+
+  const $ = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const smoothstep = (a, b, x) => {
+    const t = clamp((x - a) / (b - a), 0, 1);
+    return t * t * (3 - 2 * t);
+  };
+  const windowFade = (p, a, b, c, d) => {
+    if (p < a || p > d) return 0;
+    if (p < b) return smoothstep(a, b, p);
+    if (p > c) return 1 - smoothstep(c, d, p);
+    return 1;
+  };
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const faFmt = new Intl.NumberFormat('fa-IR');
+  const money = (n) => faFmt.format(n);
+  const faDigits = (v) => String(v).replace(/[0-9]/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[+d]);
+
+  /* ---------------- products ---------------- */
+  const PRODUCTS = [
+    {
+      id: 'gon', index: '۰۱', name: 'عسل گون کوهستان', short: 'گون کوهستان',
+      img: 'jar-gon.jpg', region: 'زاگرس و سبلان', sucrose: 'زیر ۱٫۸٪',
+      note: 'شهدی خام با عطر چوبی و پایانی گرم؛ حاصل کوچ زنبورها در دامنه‌های سبلان.',
+      props: ['تقویت سیستم ایمنی', 'تسکین مفاصل', 'انرژی‌بخش طبیعی'],
+      prices: [1290000, 2390000]
+    },
+    {
+      id: 'konar', index: '۰۲', name: 'عسل کنار خالص', short: 'کنار خالص',
+      img: 'jar-konar.jpg', region: 'دشت‌های جنوبی', sucrose: 'زیر ۲٫۲٪',
+      note: 'غلیظ و کهربایی با طعمی پررنگ؛ عصارهٔ گل‌های کنار در دشت‌های گرم جنوب.',
+      props: ['آنتی‌اکسیدان قوی', 'تقویت قوای جسمانی', 'کمک به گوارش'],
+      prices: [980000, 1790000]
+    },
+    {
+      id: 'avishan', index: '۰۳', name: 'عسل آویشن وحشی', short: 'آویشن وحشی',
+      img: 'jar-avishan.jpg', region: 'ارتفاعات البرز', sucrose: 'زیر ۱٫۵٪',
+      note: 'عطر گیاهی و نفسی تازه؛ برداشت از دامنه‌های بلند البرز در اوج گل‌دهی آویشن.',
+      props: ['ضدعفونی‌کننده مجاری تنفسی', 'ضدسرفه', 'آرام‌بخش'],
+      prices: [1450000, 2690000]
+    },
+    {
+      id: 'baharnarenj', index: '۰۴', name: 'عسل بهارنارنج معطر', short: 'بهارنارنج',
+      img: 'jar-baharnarenj.jpg', region: 'باغ‌های شمال', sucrose: 'زیر ۲٫۵٪',
+      note: 'روشن، معطر و گلگون؛ شهد شکوفه‌های نارنج در باغ‌های شمال و بهاری که در شیشه می‌ماند.',
+      props: ['نشاط‌آور', 'ضد استرس', 'تقویت حافظه'],
+      prices: [1180000, 2190000]
+    }
+  ];
+  const WEIGHTS = ['۵۰۰ گرم', '۱ کیلوگرم'];
+  const SHIPPING_MIN = 2000000;
+
+  const showcase = $('#showcase');
+  const glassCard = $('#glassCard');
+  const prodCopy = $('#prodCopy');
+  const prodIndex = $('#prodIndex');
+  const prodName = $('#prodName');
+  const prodNote = $('#prodNote');
+  const prodRegion = $('#prodRegion');
+  const prodSucrose = $('#prodSucrose');
+  const prodProps = $('#prodProps');
+  const prodPrice = $('#prodPrice');
+  const jarImages = $$('.jar-img');
+  const varietyBtns = $$('.variety');
+  const weightBtns = $$('.weight-btn');
+  const stageLine = $('#stageLine');
+  const jarCaption = $('#jarCaption');
+  const jarStage = $('#jarStage');
+
+  let activeProduct = 0;
+  let activeWeight = 0;
+  let productInitialised = false;
+
+  function updatePrice(animate) {
+    const value = PRODUCTS[activeProduct].prices[activeWeight];
+    prodPrice.textContent = money(value);
+    if (animate) {
+      prodPrice.classList.remove('is-ticking');
+      void prodPrice.offsetWidth;
+      prodPrice.classList.add('is-ticking');
+    }
+  }
+
+  function renderProduct(index, animate = true) {
+    index = clamp(index, 0, PRODUCTS.length - 1);
+    if (index === activeProduct && productInitialised) return;
+    activeProduct = index;
+    productInitialised = true;
+    const d = PRODUCTS[index];
+
+    prodIndex.textContent = d.index;
+    prodName.textContent = d.name;
+    prodNote.textContent = d.note;
+    prodRegion.textContent = d.region;
+    prodSucrose.textContent = d.sucrose;
+    prodProps.innerHTML = d.props.map((p) => `<li>${p}</li>`).join('');
+    jarCaption.textContent = d.short;
+
+    jarImages.forEach((img) => {
+      const on = Number(img.dataset.jar) === index;
+      img.classList.toggle('is-active', on);
+      img.setAttribute('aria-hidden', on ? 'false' : 'true');
+    });
+    varietyBtns.forEach((btn) => {
+      const on = Number(btn.dataset.index) === index;
+      btn.classList.toggle('is-active', on);
+      btn.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    updatePrice(false);
+
+    if (animate && !reduceMotion) {
+      prodCopy.classList.remove('is-swapping');
+      void prodCopy.offsetWidth;
+      prodCopy.classList.add('is-swapping');
+      $('.jar-halo').style.animation = 'none';
+      void $('.jar-halo').offsetWidth;
+      $('.jar-halo').style.animation = '';
+    }
+  }
+
+  function setWeight(index) {
+    activeWeight = index;
+    weightBtns.forEach((btn) => {
+      const on = Number(btn.dataset.weight) === index;
+      btn.classList.toggle('is-active', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    updatePrice(true);
+  }
+
+  weightBtns.forEach((btn) => {
+    btn.addEventListener('click', () => setWeight(Number(btn.dataset.weight)));
+  });
+
+  function journeyRange() {
+    return Math.max(1, $('#journey').offsetHeight - window.innerHeight);
+  }
+
+  function scrollToProgress(p) {
+    const y = clamp(p, 0, 1) * journeyRange();
+    window.scrollTo({ top: y, behavior: reduceMotion ? 'auto' : 'smooth' });
+  }
+
+  function jumpToProduct(index) {
+    scrollToProgress(0.585 + index * 0.09 + 0.045);
+  }
+
+  varietyBtns.forEach((btn) => {
+    btn.addEventListener('click', () => jumpToProduct(Number(btn.dataset.index)));
+  });
+
+  /* ---------------- gentle 3D tilt on the jar ---------------- */
+  if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
+    glassCard.addEventListener('pointermove', (e) => {
+      const r = jarStage.getBoundingClientRect();
+      const cx = r.left + r.width / 2;
+      const cy = r.top + r.height / 2;
+      const rx = clamp((e.clientY - cy) / r.height, -0.6, 0.6);
+      const ry = clamp((e.clientX - cx) / r.width, -0.6, 0.6);
+      const imgs = $('.jar-imgs');
+      if (imgs) imgs.style.transform = `rotateX(${(-rx * 5).toFixed(2)}deg) rotateY(${(ry * 7).toFixed(2)}deg) translateZ(10px)`;
+    });
+    glassCard.addEventListener('pointerleave', () => {
+      const imgs = $('.jar-imgs');
+      if (imgs) imgs.style.transform = '';
+    });
+  }
+  $('.jar-imgs').style.transition = 'transform .6s cubic-bezier(.22,1,.36,1)';
+
+  /* ---------------- cart / bag drawer ---------------- */
+  const bagDrawer = $('#bagDrawer');
+  const bagBackdrop = $('#bagBackdrop');
+  const bagBtn = $('#bagBtn');
+  const bagClose = $('#bagClose');
+  const bagItems = $('#bagItems');
+  const bagEmpty = $('#bagEmpty');
+  const bagFoot = $('#bagFoot');
+  const bagTotal = $('#bagTotal');
+  const bagCount = $('#bagCount');
+  const checkoutBtn = $('#checkoutBtn');
+  const shipText = $('#shipText');
+  const shipFill = $('#shipFill');
+  const shipMeter = $('#shipMeter');
+  const orderCode = $('#orderCode');
+  const toast = $('#toast');
+  const toastText = $('#toastText');
+  const cart = new Map();
+  let lastFocus = null;
+  let toastTimer = 0;
+
+  function showToast(message) {
+    toastText.textContent = message;
+    toast.classList.add('is-showing');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('is-showing'), 2800);
+  }
+
+  function cartTotals() {
+    let count = 0;
+    let total = 0;
+    cart.forEach((item) => {
+      const product = PRODUCTS.find((p) => p.id === item.id);
+      if (!product) return;
+      count += item.qty;
+      total += product.prices[item.weight] * item.qty;
+    });
+    return { count, total };
+  }
+
+  function renderCart() {
+    const items = Array.from(cart.entries());
+    const { count, total } = cartTotals();
+    bagCount.textContent = faDigits(count);
+
+    bagEmpty.style.display = items.length ? 'none' : '';
+    bagItems.innerHTML = items.map(([key, item]) => {
+      const product = PRODUCTS.find((p) => p.id === item.id);
+      if (!product) return '';
+      const lineTotal = product.prices[item.weight] * item.qty;
+      return `
+        <li class="bag-item">
+          <div class="bag-thumb"><img src="${product.img}" alt="" width="1024" height="1024" loading="lazy" /></div>
+          <div class="bag-info">
+            <strong>${product.name}</strong>
+            <span>${WEIGHTS[item.weight]} · ${money(product.prices[item.weight])} تومان</span>
+            <div class="bag-qty">
+              <button type="button" data-act="dec" data-key="${key}" aria-label="کاهش تعداد">−</button>
+              <span>${faDigits(item.qty)}</span>
+              <button type="button" data-act="inc" data-key="${key}" aria-label="افزایش تعداد">+</button>
+            </div>
+          </div>
+          <div class="bag-item-side">
+            <span class="bag-item-total">${money(lineTotal)} <small>تومان</small></span>
+            <button type="button" class="bag-remove" data-act="remove" data-key="${key}">حذف</button>
+          </div>
+        </li>`;
+    }).join('');
+
+    const remaining = Math.max(0, SHIPPING_MIN - total);
+    if (total <= 0) {
+      shipText.textContent = 'ارسال رایگان برای سفارش‌های بالای ۲ میلیون تومان';
+      shipMeter.classList.remove('is-free');
+      shipFill.style.width = '0%';
+    } else if (remaining > 0) {
+      shipText.textContent = `${money(remaining)} تومان تا ارسال رایگان`;
+      shipMeter.classList.remove('is-free');
+      shipFill.style.width = `${Math.min(100, (total / SHIPPING_MIN) * 100)}%`;
+    } else {
+      shipText.textContent = 'ارسال رایگان برای این سفارش فعال شد';
+      shipMeter.classList.add('is-free');
+      shipFill.style.width = '100%';
+    }
+
+    bagTotal.textContent = money(total);
+    bagFoot.hidden = items.length === 0;
+    checkoutBtn.disabled = items.length === 0;
+  }
+
+  function addToCart(id, weight = 0) {
+    const product = PRODUCTS.find((p) => p.id === id);
+    if (!product) return;
+    const key = `${id}:${weight}`;
+    const existing = cart.get(key);
+    if (existing) existing.qty += 1;
+    else cart.set(key, { id, weight, qty: 1 });
+    renderCart();
+    openBag();
+    showToast(`${product.short} به سبد خرید اضافه شد`);
+  }
+
+  function openBag() {
+    if (document.body.classList.contains('bag-open')) return;
+    lastFocus = document.activeElement;
+    bagDrawer.classList.remove('is-success');
+    document.body.classList.add('bag-open');
+    bagDrawer.removeAttribute('inert');
+    bagDrawer.setAttribute('aria-hidden', 'false');
+    bagBackdrop.setAttribute('aria-hidden', 'false');
+    setTimeout(() => bagClose.focus({ preventScroll: true }), 120);
+  }
+
+  function closeBag() {
+    if (!document.body.classList.contains('bag-open')) return;
+    document.body.classList.remove('bag-open');
+    bagDrawer.setAttribute('aria-hidden', 'true');
+    bagDrawer.setAttribute('inert', '');
+    bagBackdrop.setAttribute('aria-hidden', 'true');
+    if (lastFocus && typeof lastFocus.focus === 'function') {
+      lastFocus.focus({ preventScroll: true });
+    }
+  }
+
+  function resetSuccessLater() {
+    setTimeout(() => bagDrawer.classList.remove('is-success'), 450);
+  }
+
+  bagBtn.addEventListener('click', openBag);
+  bagClose.addEventListener('click', () => { closeBag(); resetSuccessLater(); });
+  bagBackdrop.addEventListener('click', () => { closeBag(); resetSuccessLater(); });
+  $('#closeSuccess').addEventListener('click', () => { closeBag(); resetSuccessLater(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (document.body.classList.contains('bag-open')) { closeBag(); resetSuccessLater(); }
+      closeMenu();
+    }
+  });
+
+  bagItems.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-act]');
+    if (!btn) return;
+    const key = btn.dataset.key;
+    const item = cart.get(key);
+    if (!item) return;
+    const act = btn.dataset.act;
+    if (act === 'inc') item.qty += 1;
+    if (act === 'dec') {
+      item.qty -= 1;
+      if (item.qty <= 0) cart.delete(key);
+    }
+    if (act === 'remove') cart.delete(key);
+    renderCart();
+  });
+
+  checkoutBtn.addEventListener('click', () => {
+    if (!cart.size) return;
+    const code = `NB-${faDigits(1000 + Math.floor(Math.random() * 9000))}`;
+    orderCode.textContent = code;
+    bagDrawer.classList.add('is-success');
+    cart.clear();
+    renderCart();
+    showToast('سفارش با موفقیت ثبت شد');
+    setTimeout(() => $('#closeSuccess').focus({ preventScroll: true }), 80);
+  });
+
+  $('#orderBtn').addEventListener('click', () => {
+    addToCart(PRODUCTS[activeProduct].id, activeWeight);
+  });
+
+  $$('.js-add').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      addToCart(btn.dataset.id, Number(btn.dataset.weight) || 0);
+    });
+  });
+
+  $$('[data-open-bag]').forEach((el) => el.addEventListener('click', openBag));
+  $$('[data-close-bag]').forEach((el) => el.addEventListener('click', closeBag));
+
+  renderCart();
+
+  /* ---------------- navigation ---------------- */
+  const menuBtn = $('#menuBtn');
+  const mobileMenu = $('#mobileMenu');
+  const header = $('#siteHeader');
+
+  function closeMenu() {
+    if (!mobileMenu.classList.contains('is-open')) return;
+    mobileMenu.classList.remove('is-open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  function openMenu() {
+    mobileMenu.classList.add('is-open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    menuBtn.setAttribute('aria-expanded', 'true');
+  }
+
+  menuBtn.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('is-open')) closeMenu();
+    else openMenu();
+  });
+
+  function goTo(target) {
+    if (target === 'top') {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      return;
+    }
+    const el = document.getElementById(target);
+    if (!el) return;
+    el.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+  }
+
+  $$('[data-scroll]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = el.dataset.scroll;
+      const inBag = !!el.closest('.bag-drawer');
+      closeMenu();
+      if (inBag) {
+        closeBag();
+        resetSuccessLater();
+        setTimeout(() => goTo(target), 120);
+      } else {
+        goTo(target);
+      }
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!mobileMenu.classList.contains('is-open')) return;
+    if (e.target.closest('#mobileMenu') || e.target.closest('#menuBtn')) return;
+    closeMenu();
+  });
+
+  const headerState = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 36);
+  };
+  headerState();
+  window.addEventListener('scroll', headerState, { passive: true });
+
+  /* ---------------- scroll progress (GSAP ScrollTrigger, with fallback) ---------------- */
+  const progressState = { raw: 0, p: 0 };
+  let hasGsap = false;
+
+  if (window.gsap && window.ScrollTrigger) {
+    try {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to(progressState, {
+        raw: 1,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '#journey',
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 1.2,
+          invalidateOnRefresh: true
+        }
+      });
+      hasGsap = true;
+    } catch (err) {
+      console.warn('ScrollTrigger unavailable, using native scroll.', err);
+    }
+  }
+
+  function fallbackProgress() {
+    const range = journeyRange();
+    progressState.raw = clamp(window.scrollY / range, 0, 1);
+  }
+  if (!hasGsap) {
+    fallbackProgress();
+    window.addEventListener('scroll', fallbackProgress, { passive: true });
+    window.addEventListener('resize', fallbackProgress);
+  }
+
+  /* ---------------- reveal on scroll ---------------- */
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    $$('.reveal').forEach((el) => io.observe(el));
+  } else {
+    $$('.reveal').forEach((el) => el.classList.add('is-in'));
+  }
+
+  const progressBar = $('#scrollProgress');
+  const scrollHint = $('#scrollHint');
+  const stageMeter = $('#stageMeter');
+  const stageMeterText = $('#stageMeterText');
+  const stageMeterPercent = $('#stageMeterPercent');
+  const phase1 = $('#phase1');
+  const phase2 = $('#phase2');
+  const phase3 = $('#phase3');
+
+  function updateStory(p) {
+    const specs = [
+      { el: phase1, in: -0.04, holdIn: 0, holdOut: 0.155, out: 0.196 },
+      { el: phase2, in: 0.215, holdIn: 0.247, holdOut: 0.4, out: 0.443 },
+      { el: phase3, in: 0.45, holdIn: 0.468, holdOut: 0.49, out: 0.515 }
+    ];
+    specs.forEach((spec) => {
+      const o = windowFade(p, spec.in, spec.holdIn, spec.holdOut, spec.out);
+      const enter = smoothstep(spec.in, spec.holdIn, p);
+      const exit = smoothstep(spec.holdOut, spec.out, p);
+      spec.el.style.opacity = o.toFixed(3);
+      spec.el.style.transform = `translate3d(0, ${((1 - enter) * 30 - exit * 82).toFixed(1)}px, 0) scale(${(0.965 + enter * 0.035 + exit * 0.07).toFixed(3)})`;
+      spec.el.style.filter = `blur(${((1 - enter) * 7 + exit * 11).toFixed(1)}px)`;
+      spec.el.style.visibility = o < 0.002 ? 'hidden' : 'visible';
+    });
+
+    scrollHint.style.opacity = p > 0.045 ? '0' : '1';
+    scrollHint.style.visibility = p > 0.08 ? 'hidden' : 'visible';
+    stageMeter.style.opacity = p > 0.47 ? '0' : '1';
+    stageMeter.style.visibility = p > 0.51 ? 'hidden' : 'visible';
+    stageMeter.style.setProperty('--tunnel-progress', clamp(p / 0.45, 0, 1).toFixed(3));
+    const phaseLabel = p < 0.22 ? 'فصل ۰۱ · کندوی طلایی'
+      : p < 0.47 ? 'فصل ۰۲ · خروج از کندو'
+      : 'فصل ۰۳ · روشنای شهد';
+    if (stageMeterText.textContent !== phaseLabel) stageMeterText.textContent = phaseLabel;
+    stageMeterPercent.textContent = `${faDigits(Math.round(clamp(p, 0, 1) * 100))}٪`;
+
+    const showCard = p >= 0.505 && p < 0.982;
+    const wasVisible = showcase.classList.contains('is-visible');
+    if (showCard !== wasVisible) {
+      showcase.classList.toggle('is-visible', showCard);
+      showcase.setAttribute('aria-hidden', showCard ? 'false' : 'true');
+      if (showCard) showcase.removeAttribute('inert');
+      else showcase.setAttribute('inert', '');
+    }
+    if (showCard) {
+      const idx = p < 0.585 ? 0 : Math.min(3, Math.floor((p - 0.585) / 0.09));
+      if (idx !== activeProduct || !productInitialised) renderProduct(idx, idx !== activeProduct);
+      const stageProgress = clamp((p - 0.585) / 0.36, 0, 1);
+      stageLine.style.transform = `scaleX(${stageProgress.toFixed(3)})`;
+    }
+  }
+
+  /* ---------------- boot timing ---------------- */
+  const hideLoader = () => document.documentElement.classList.add('is-loaded');
+  if (document.readyState === 'complete') setTimeout(hideLoader, 500);
+  else window.addEventListener('load', () => setTimeout(hideLoader, 650));
+  setTimeout(hideLoader, 3600);
+
+  const refreshScroll = () => {
+    if (window.ScrollTrigger) {
+      try { ScrollTrigger.refresh(); } catch (err) { /* noop */ }
+    }
+    if (!hasGsap) fallbackProgress();
+  };
+  window.addEventListener('load', () => setTimeout(refreshScroll, 250));
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => setTimeout(refreshScroll, 120));
+  window.addEventListener('resize', () => setTimeout(refreshScroll, 160));
+
+  /* ============================================================
+     WebGL experience — honeycomb tunnel → golden sanctuary
+     ============================================================ */
+  const canvas = $('#webgl');
+  const cursorGlow = $('#cursorGlow');
+  const pointer = { x: 0, y: 0, tx: 0, ty: 0 };
+  const isLoadingReduced = reduceMotion;
+  const isSmall = window.innerWidth < 760;
+  const hasHover = window.matchMedia('(pointer:fine)').matches;
+
+  if (hasHover) {
+    window.addEventListener('pointermove', (e) => {
+      pointer.tx = (e.clientX / window.innerWidth) * 2 - 1;
+      pointer.ty = (e.clientY / window.innerHeight) * 2 - 1;
+      if (cursorGlow) {
+        cursorGlow.style.transform = `translate3d(${e.clientX - 210}px, ${e.clientY - 210}px, 0)`;
+      }
+    }, { passive: true });
+  }
+
+  function makeGlowTexture(size = 256, inner = 'rgba(255,250,232,1)', mid = 'rgba(245,158,11,.32)') {
+    const c = document.createElement('canvas');
+    c.width = c.height = size;
+    const ctx = c.getContext('2d');
+    const g = ctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+    g.addColorStop(0, inner);
+    g.addColorStop(0.18, 'rgba(255,232,168,.9)');
+    g.addColorStop(0.42, mid);
+    g.addColorStop(1, 'rgba(245,158,11,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, size, size);
+    const tex = new THREE.CanvasTexture(c);
+    tex.encoding = THREE.sRGBEncoding;
+    tex.minFilter = THREE.LinearFilter;
+    return tex;
+  }
+
+  function makeSkyTexture() {
+    const c = document.createElement('canvas');
+    c.width = 1024;
+    c.height = 1024;
+    const ctx = c.getContext('2d');
+    const g = ctx.createLinearGradient(0, 0, 0, 1024);
+    g.addColorStop(0, '#050302');
+    g.addColorStop(0.28, '#140b04');
+    g.addColorStop(0.47, '#341b07');
+    g.addColorStop(0.57, '#542809');
+    g.addColorStop(0.615, '#9a5213');
+    g.addColorStop(0.642, '#df9a33');
+    g.addColorStop(0.664, '#b9721f');
+    g.addColorStop(0.70, '#4a2509');
+    g.addColorStop(0.78, '#1a0c03');
+    g.addColorStop(1, '#080402');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, 1024, 1024);
+
+    // faint stars in the upper dark sky
+    ctx.globalCompositeOperation = 'lighter';
+    for (let i = 0; i < 90; i++) {
+      const x = Math.random() * 1024;
+      const y = Math.random() * 390;
+      const a = Math.random() * 0.35 + 0.05;
+      const r = Math.random() * 1.4 + 0.3;
+      ctx.fillStyle = `rgba(255,232,180,${a.toFixed(3)})`;
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // the sun bloom on the horizon
+    const rg = ctx.createRadialGradient(512, 648, 0, 512, 648, 560);
+    rg.addColorStop(0, 'rgba(255,244,214,.86)');
+    rg.addColorStop(0.09, 'rgba(255,215,140,.58)');
+    rg.addColorStop(0.26, 'rgba(240,160,50,.28)');
+    rg.addColorStop(0.55, 'rgba(200,100,10,.1)');
+    rg.addColorStop(1, 'rgba(200,100,10,0)');
+    ctx.fillStyle = rg;
+    ctx.fillRect(0, 0, 1024, 1024);
+
+    const tex = new THREE.CanvasTexture(c);
+    tex.encoding = THREE.sRGBEncoding;
+    tex.minFilter = THREE.LinearFilter;
+    return tex;
+  }
+
+  function makeBeamTexture() {
+    const c = document.createElement('canvas');
+    c.width = 256;
+    c.height = 1024;
+    const ctx = c.getContext('2d');
+    const h = ctx.createLinearGradient(0, 0, 256, 0);
+    h.addColorStop(0, 'rgba(255,255,255,0)');
+    h.addColorStop(0.32, 'rgba(255,255,255,.22)');
+    h.addColorStop(0.5, 'rgba(255,255,255,.82)');
+    h.addColorStop(0.68, 'rgba(255,255,255,.22)');
+    h.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = h;
+    ctx.fillRect(0, 0, 256, 1024);
+    ctx.globalCompositeOperation = 'destination-in';
+    const v = ctx.createLinearGradient(0, 0, 0, 1024);
+    v.addColorStop(0, 'rgba(255,255,255,1)');
+    v.addColorStop(0.32, 'rgba(255,255,255,.55)');
+    v.addColorStop(0.72, 'rgba(255,255,255,.08)');
+    v.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = v;
+    ctx.fillRect(0, 0, 256, 1024);
+    const tex = new THREE.CanvasTexture(c);
+    tex.encoding = THREE.sRGBEncoding;
+    tex.minFilter = THREE.LinearFilter;
+    return tex;
+  }
+
+  function createExperience() {
+    if (!window.THREE) throw new Error('Three.js was not loaded');
+
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: !isSmall,
+      alpha: false,
+      powerPreference: 'high-performance'
+    });
+    const dpr = Math.min(window.devicePixelRatio || 1, isSmall ? 1.5 : 1.75);
+    renderer.setPixelRatio(dpr);
+    renderer.setSize(window.innerWidth, window.innerHeight, false);
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.06;
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x150b03);
+    scene.fog = new THREE.FogExp2(0x1a0d04, 0.016);
+
+    const camera = new THREE.PerspectiveCamera(58, window.innerWidth / window.innerHeight, 0.1, 2400);
+    const clockStart = performance.now();
+
+    const glowTex = makeGlowTexture();
+    const softGlowTex = makeGlowTexture(256, 'rgba(255,255,255,.95)', 'rgba(251,191,36,.25)');
+    const skyTex = makeSkyTexture();
+    const beamTex = makeBeamTexture();
+
+    scene.add(new THREE.AmbientLight(0xffb866, 0.14));
+    const hemi = new THREE.HemisphereLight(0xffcb78, 0x160a03, 0.16);
+    scene.add(hemi);
+
+    /* ---------- the curved tunnel ---------- */
+    const TUNNEL_R = 9.15;
+    const TUNNEL_Z0 = 10;
+    const TUNNEL_LEN = 216;
+    const UP = new THREE.Vector3(0, 1, 0);
+
+    const centerAt = (s, out = new THREE.Vector3()) => {
+      const z = TUNNEL_Z0 - TUNNEL_LEN * s;
+      const x = Math.sin(s * Math.PI * 2.35) * 3.1;
+      const y = Math.sin(s * Math.PI * 1.55) * 2.2;
+      return out.set(x, y, z);
+    };
+
+    const frameAt = (s) => {
+      const e = 0.0025;
+      const a = centerAt(Math.max(-0.08, s - e));
+      const b = centerAt(Math.min(1.12, s + e));
+      const T = b.clone().sub(a).normalize();
+      const U = new THREE.Vector3().crossVectors(T, UP).normalize();
+      const V = new THREE.Vector3().crossVectors(U, T).normalize();
+      return { T, U, V };
+    };
+
+    // translucent wax wall
+    const wallSegs = isLoadingReduced ? 90 : (isSmall ? 120 : 170);
+    const wallRad = isSmall ? 28 : 40;
+    const wallPositions = [];
+    const wallIndices = [];
+    for (let i = 0; i <= wallSegs; i++) {
+      const s = (i / wallSegs) * 0.998 + 0.001;
+      const c = centerAt(s);
+      const f = frameAt(s);
+      for (let j = 0; j < wallRad; j++) {
+        const ang = (j / wallRad) * Math.PI * 2;
+        const rr = TUNNEL_R + Math.sin(ang * 3 + s * 72) * 0.11 + Math.sin(ang * 2 - s * 33) * 0.065;
+        const px = c.x + f.U.x * Math.cos(ang) * rr + f.V.x * Math.sin(ang) * rr;
+        const py = c.y + f.U.y * Math.cos(ang) * rr + f.V.y * Math.sin(ang) * rr;
+        const pz = c.z + f.U.z * Math.cos(ang) * rr + f.V.z * Math.sin(ang) * rr;
+        wallPositions.push(px, py, pz);
+      }
+    }
+    for (let i = 0; i < wallSegs; i++) {
+      for (let j = 0; j < wallRad; j++) {
+        const a = i * wallRad + j;
+        const b = i * wallRad + ((j + 1) % wallRad);
+        const c = (i + 1) * wallRad + j;
+        const d = (i + 1) * wallRad + ((j + 1) % wallRad);
+        wallIndices.push(a, c, b, b, c, d);
+      }
+    }
+    const wallGeo = new THREE.BufferGeometry();
+    wallGeo.setAttribute('position', new THREE.Float32BufferAttribute(wallPositions, 3));
+    wallGeo.setIndex(wallIndices);
+    wallGeo.computeVertexNormals();
+    const wallMat = new THREE.MeshStandardMaterial({
+      color: 0x643007,
+      emissive: 0x1a0c03,
+      emissiveIntensity: 0.22,
+      roughness: 0.22,
+      metalness: 0.94,
+      transparent: true,
+      opacity: 1,
+      side: THREE.DoubleSide
+    });
+    const wall = new THREE.Mesh(wallGeo, wallMat);
+    scene.add(wall);
+
+    // a faint amber membrane just inside the wall
+    const membrane = new THREE.Mesh(
+      wallGeo.clone(),
+      new THREE.MeshBasicMaterial({
+        color: 0xf59e0b,
+        transparent: true,
+        opacity: 0.022,
+        side: THREE.DoubleSide,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+        fog: true
+      })
+    );
+    membrane.scale.set(0.985, 0.985, 1);
+    scene.add(membrane);
+
+    // honeycomb cell outlines
+    const honeyRows = isLoadingReduced ? 46 : (isSmall ? 56 : 69);
+    const honeyAround = isLoadingReduced ? 11 : (isSmall ? 13 : 16);
+    const honeySize = (2 * Math.PI * (TUNNEL_R - 0.22)) / honeyAround / Math.sqrt(3);
+    const honeyPositions = [];
+    const honeyColors = [];
+    const col = new THREE.Color();
+    for (let row = 0; row <= honeyRows; row++) {
+      const s = 0.005 + (row / honeyRows) * 0.99;
+      const c = centerAt(s);
+      const f = frameAt(s);
+      for (let k = 0; k < honeyAround; k++) {
+        const baseAng = (k / honeyAround) * Math.PI * 2 + (row % 2 ? Math.PI / honeyAround : 0);
+        const rr = TUNNEL_R - 0.22;
+        const dir = new THREE.Vector3()
+          .addScaledVector(f.U, Math.cos(baseAng))
+          .addScaledVector(f.V, Math.sin(baseAng));
+        const e1 = new THREE.Vector3()
+          .addScaledVector(f.U, -Math.sin(baseAng))
+          .addScaledVector(f.V, Math.cos(baseAng));
+        const e2 = f.T;
+        const cellCenter = c.clone().addScaledVector(dir, rr);
+        const size = honeySize;
+        const vertices = [];
+        for (let a = 0; a < 6; a++) {
+          const ang = (a / 6) * Math.PI * 2 + Math.PI / 6;
+          vertices.push(cellCenter.clone()
+            .addScaledVector(e1, Math.cos(ang) * size)
+            .addScaledVector(e2, Math.sin(ang) * size * 1.08));
+        }
+        const bright = 0.17 + 0.17 * Math.abs(Math.sin(row * 1.31 + k * 2.17));
+        col.setHSL(0.085 + ((row + k) % 4) * 0.007, 0.92, bright);
+        for (let a = 0; a < 6; a++) {
+          const p1 = vertices[a];
+          const p2 = vertices[(a + 1) % 6];
+          honeyPositions.push(p1.x, p1.y, p1.z, p2.x, p2.y, p2.z);
+          honeyColors.push(col.r, col.g, col.b, col.r, col.g, col.b);
+        }
+      }
+    }
+    const honeyGeo = new THREE.BufferGeometry();
+    honeyGeo.setAttribute('position', new THREE.Float32BufferAttribute(honeyPositions, 3));
+    honeyGeo.setAttribute('color', new THREE.Float32BufferAttribute(honeyColors, 3));
+    const honey = new THREE.LineSegments(honeyGeo, new THREE.LineBasicMaterial({
+      vertexColors: true,
+      transparent: true,
+      opacity: 0.4,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      fog: true
+    }));
+    scene.add(honey);
+
+    // structural glowing ribs
+    const ribMat = new THREE.MeshBasicMaterial({
+      color: 0xffb347,
+      transparent: true,
+      opacity: 0.6,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      fog: true
+    });
+    function addHexRing(s, radius, thickness, mat, spin = 0) {
+      const g = new THREE.Group();
+      const c = centerAt(s);
+      const f = frameAt(s);
+      g.position.copy(c);
+      g.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), f.T);
+      g.rotateZ(spin);
+      const verts = [];
+      for (let k = 0; k < 6; k++) {
+        const a = (k / 6) * Math.PI * 2 + Math.PI / 6;
+        verts.push(new THREE.Vector3(Math.cos(a) * radius, Math.sin(a) * radius, 0));
+      }
+      for (let k = 0; k < 6; k++) {
+        const p1 = verts[k];
+        const p2 = verts[(k + 1) % 6];
+        const len = p1.distanceTo(p2);
+        const geo = new THREE.CylinderGeometry(thickness, thickness, len, 5, 1, true);
+        const mesh = new THREE.Mesh(geo, mat);
+        mesh.position.copy(p1).add(p2).multiplyScalar(0.5);
+        mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), p2.clone().sub(p1).normalize());
+        g.add(mesh);
+      }
+      scene.add(g);
+      return g;
+    }
+    const ribPositions = [0.02, 0.16, 0.30, 0.44, 0.58, 0.72, 0.86, 0.995];
+    ribPositions.forEach((s) => addHexRing(s, TUNNEL_R + 0.02, 0.045, ribMat));
+
+    const exitPortalMat = new THREE.MeshBasicMaterial({
+      color: 0xffe7b2,
+      transparent: true,
+      opacity: 0.98,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      fog: true
+    });
+    const exitPortal = addHexRing(1.0, TUNNEL_R + 0.7, 0.115, exitPortalMat);
+    addHexRing(1.006, TUNNEL_R + 2.1, 0.04, ribMat, Math.PI / 6);
+
+    // warm lights down the tunnel
+    const tunnelLights = [];
+    const lightCount = isSmall ? 5 : 7;
+    for (let i = 0; i < lightCount; i++) {
+      const s = 0.06 + (i / lightCount) * 0.88;
+      const c = centerAt(s);
+      const f = frameAt(s);
+      const pl = new THREE.PointLight(i % 2 ? 0xd97706 : 0xf59e0b, 0.72, 26, 2);
+      pl.position.copy(c).addScaledVector(f.U, 4.4).addScaledVector(f.V, (i % 3 - 1) * 2.1);
+      scene.add(pl);
+      tunnelLights.push({ light: pl, base: 0.68 + Math.random() * 0.18, phase: Math.random() * 8 });
+    }
+    const exitLight = new THREE.PointLight(0xfde68a, 1.5, 90, 1.8);
+    exitLight.position.copy(centerAt(1.0));
+    scene.add(exitLight);
+
+    // glow orbs floating in the tunnel
+    const orbSprites = [];
+    const orbCount = isSmall ? 9 : 18;
+    for (let i = 0; i < orbCount; i++) {
+      const s = 0.03 + Math.random() * 0.95;
+      const c = centerAt(s);
+      const f = frameAt(s);
+      const ang = Math.random() * Math.PI * 2;
+      const rr = 2.2 + Math.random() * 5.6;
+      const mat = new THREE.SpriteMaterial({
+        map: softGlowTex,
+        color: Math.random() > 0.4 ? 0xffc657 : 0xfff0c2,
+        transparent: true,
+        opacity: 0.18 + Math.random() * 0.28,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+        fog: false
+      });
+      const sp = new THREE.Sprite(mat);
+      sp.position.copy(c)
+        .addScaledVector(f.U, Math.cos(ang) * rr)
+        .addScaledVector(f.V, Math.sin(ang) * rr);
+      const sc = 0.7 + Math.random() * 2.6;
+      sp.scale.set(sc, sc, 1);
+      scene.add(sp);
+      orbSprites.push({ sprite: sp, baseY: sp.position.y, baseOpacity: mat.opacity, phase: Math.random() * 9, amp: 0.25 + Math.random() * 0.5 });
+    }
+
+    // drifting pollen inside the tunnel
+    function makeTunnelDust(count, size, opacity, color) {
+      const positions = new Float32Array(count * 3);
+      for (let i = 0; i < count; i++) {
+        const s = -0.02 + Math.random() * 1.06;
+        const c = centerAt(s);
+        const f = frameAt(s);
+        const ang = Math.random() * Math.PI * 2;
+        const rr = Math.sqrt(Math.random()) * (TUNNEL_R - 0.9);
+        positions[i * 3] = c.x + f.U.x * Math.cos(ang) * rr + f.V.x * Math.sin(ang) * rr;
+        positions[i * 3 + 1] = c.y + f.U.y * Math.cos(ang) * rr + f.V.y * Math.sin(ang) * rr;
+        positions[i * 3 + 2] = c.z + f.U.z * Math.cos(ang) * rr + f.V.z * Math.sin(ang) * rr;
+      }
+      const geo = new THREE.BufferGeometry();
+      geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      const mat = new THREE.PointsMaterial({
+        map: softGlowTex,
+        color,
+        size,
+        transparent: true,
+        opacity,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+        sizeAttenuation: true,
+        fog: true
+      });
+      const pts = new THREE.Points(geo, mat);
+      scene.add(pts);
+      return pts;
+    }
+    const tunnelDust = makeTunnelDust(isSmall ? 320 : 620, 0.34, 0.6, 0xffe3a6);
+    const tunnelMotes = makeTunnelDust(isSmall ? 70 : 135, 1.15, 0.46, 0xffc247);
+
+    // light at the end of the tunnel
+    const exitGlow = new THREE.Sprite(new THREE.SpriteMaterial({
+      map: glowTex,
+      color: 0xffdda0,
+      transparent: true,
+      opacity: 0.24,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      fog: false
+    }));
+    exitGlow.position.copy(centerAt(1.015));
+    exitGlow.position.z -= 8;
+    exitGlow.scale.set(31, 31, 1);
+    scene.add(exitGlow);
+
+    /* ---------- the sanctuary ---------- */
+    const sanctuaryStart = scene.children.length;
+    // sky
+    const skyMat = new THREE.MeshBasicMaterial({
+      map: skyTex,
+      fog: false,
+      depthWrite: false,
+      toneMapped: false,
+      side: THREE.DoubleSide
+    });
+    const sky = new THREE.Mesh(new THREE.PlaneGeometry(3400, 2000), skyMat);
+    sky.position.set(0, 300, -1120);
+    sky.renderOrder = -10;
+    scene.add(sky);
+
+    // god rays behind the mountains
+    const rays = new THREE.Group();
+    rays.position.set(130, 200, -1035);
+    const rayMats = [];
+    const rayCount = isSmall ? 4 : 7;
+    for (let i = 0; i < rayCount; i++) {
+      const w = 95 + Math.random() * 150;
+      const h = 780 + Math.random() * 280;
+      const geo = new THREE.PlaneGeometry(w, h);
+      geo.translate(0, -h / 2, 0);
+      const mat = new THREE.MeshBasicMaterial({
+        map: beamTex,
+        color: i % 3 === 0 ? 0xffe6b8 : 0xffb44e,
+        transparent: true,
+        opacity: 0.055 + Math.random() * 0.05,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+        fog: false,
+        toneMapped: false,
+        side: THREE.DoubleSide
+      });
+      const beam = new THREE.Mesh(geo, mat);
+      beam.position.set((i - (rayCount - 1) / 2) * 105, 0, -4 - i * 3);
+      beam.rotation.z = (i - (rayCount - 1) / 2) * 0.11 + (Math.random() - 0.5) * 0.06;
+      rays.add(beam);
+      rayMats.push({ mat, base: mat.opacity, phase: Math.random() * 7 });
+    }
+    scene.add(rays);
+
+    // sun
+    const sun = new THREE.Sprite(new THREE.SpriteMaterial({
+      map: glowTex,
+      color: 0xffc46a,
+      transparent: true,
+      opacity: 0.58,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      fog: false,
+      toneMapped: false
+    }));
+    sun.position.set(150, 220, -1010);
+    sun.scale.set(260, 260, 1);
+    scene.add(sun);
+
+    const sunCore = new THREE.Sprite(new THREE.SpriteMaterial({
+      map: softGlowTex,
+      color: 0xffe2a3,
+      transparent: true,
+      opacity: 0.75,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      fog: false,
+      toneMapped: false
+    }));
+    sunCore.position.set(150, 220, -1008);
+    sunCore.scale.set(80, 80, 1);
+    scene.add(sunCore);
+
+    // layered mountain + meadow silhouettes
+    function addRidge({ z, base, height, color, seed, lineColor, lineOpacity, width = 2300, points = 150, grass = false }) {
+      const shape = new THREE.Shape();
+      const ridge = [];
+      shape.moveTo(-width / 2, base - 600);
+      const tri = (t) => 1 - Math.abs(((t % 2) + 2) % 2 - 1);
+      for (let i = 0; i <= points; i++) {
+        const nx = (i / points) * 2 - 1;
+        const hNorm =
+          0.52 * tri(nx * 5.5 + seed) +
+          0.3 * tri(nx * 11.7 + seed * 2.3) +
+          0.18 * tri(nx * 23.5 + seed * 1.3);
+        let h = height * (0.22 + 0.78 * hNorm);
+        if (grass) h += (Math.sin(nx * 26 + seed) * 0.5 + 0.5) * height * 0.1;
+        const y = base + Math.max(0, h);
+        const x = (i / points) * width - width / 2;
+        shape.lineTo(x, y);
+        ridge.push(new THREE.Vector3(x, y, 0));
+      }
+      shape.lineTo(width / 2, base - 600);
+      shape.closePath();
+      const mesh = new THREE.Mesh(
+        new THREE.ShapeGeometry(shape),
+        new THREE.MeshBasicMaterial({ color, fog: false, side: THREE.DoubleSide })
+      );
+      mesh.position.z = z;
+      scene.add(mesh);
+
+      if (lineColor) {
+        const lineGeo = new THREE.BufferGeometry().setFromPoints(ridge.map((p) => new THREE.Vector3(p.x, p.y + 0.6, 0.7)));
+        const line = new THREE.Line(lineGeo, new THREE.LineBasicMaterial({
+          color: lineColor,
+          transparent: true,
+          opacity: lineOpacity || 0.16,
+          blending: THREE.AdditiveBlending,
+          depthWrite: false,
+          fog: false
+        }));
+        line.position.z = z;
+        scene.add(line);
+      }
+      return mesh;
+    }
+
+    addRidge({ z: -900, base: -60, height: 250, color: 0x271608, seed: 1.4, lineColor: 0xf3b04d, lineOpacity: 0.2, width: 2800 });
+    addRidge({ z: -815, base: -95, height: 205, color: 0x1a0d05, seed: 6.8, lineColor: 0xf8b447, lineOpacity: 0.14, width: 2500 });
+    addRidge({ z: -705, base: -185, height: 118, color: 0x090401, seed: 12.2, lineColor: 0xc97a24, lineOpacity: 0.1, width: 2200, grass: true });
+
+    // floating bokeh in the sanctuary air
+    const bokehs = [];
+    const bokehCount = isSmall ? 26 : 46;
+    const bokehPalette = [0xfbbf24, 0xf59e0b, 0xe89a2c, 0xd97706, 0xfcd34d];
+    for (let i = 0; i < bokehCount; i++) {
+      const z = -325 - Math.random() * 370;
+      const x = (Math.random() * 2 - 1) * (100 + Math.random() * 30);
+      const y = -15 + Math.random() * 105;
+      const size = (Math.random() < 0.15 ? 22 : 4) + Math.random() * (Math.random() < 0.15 ? 26 : 13);
+      const mat = new THREE.SpriteMaterial({
+        map: softGlowTex,
+        color: bokehPalette[i % bokehPalette.length],
+        transparent: true,
+        opacity: (Math.random() < 0.15 ? 0.06 : 0.12) + Math.random() * 0.16,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+        fog: false
+      });
+      const sp = new THREE.Sprite(mat);
+      sp.position.set(x, y, z);
+      sp.scale.set(size, size, 1);
+      scene.add(sp);
+      bokehs.push({
+        sprite: sp,
+        baseY: y,
+        baseOpacity: mat.opacity,
+        amp: 1 + Math.random() * 3.2,
+        speed: 0.12 + Math.random() * 0.22,
+        phase: Math.random() * 10
+      });
+    }
+
+    // floating dust in the sanctuary
+    const sanctDustCount = isSmall ? 260 : 480;
+    const sanctDustPos = new Float32Array(sanctDustCount * 3);
+    for (let i = 0; i < sanctDustCount; i++) {
+      sanctDustPos[i * 3] = (Math.random() * 2 - 1) * 105;
+      sanctDustPos[i * 3 + 1] = -25 + Math.random() * 125;
+      sanctDustPos[i * 3 + 2] = -315 - Math.random() * 500;
+    }
+    const sanctDustGeo = new THREE.BufferGeometry();
+    sanctDustGeo.setAttribute('position', new THREE.BufferAttribute(sanctDustPos, 3));
+    const sanctDust = new THREE.Points(sanctDustGeo, new THREE.PointsMaterial({
+      map: softGlowTex,
+      color: 0xffdf9d,
+      size: 0.55,
+      transparent: true,
+      opacity: 0.55,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      sizeAttenuation: true,
+      fog: false
+    }));
+    scene.add(sanctDust);
+
+    // a couple of slow floating hex outlines as sanctuary architecture
+    const distantHexMat = new THREE.LineBasicMaterial({
+      color: 0xffc266,
+      transparent: true,
+      opacity: 0.055,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      fog: false
+    });
+    const distantHexes = [];
+    for (let i = 0; i < 5; i++) {
+      const r = 20 + Math.random() * 40;
+      const pts = [];
+      for (let a = 0; a <= 6; a++) {
+        const ang = (a / 6) * Math.PI * 2;
+        pts.push(new THREE.Vector3(Math.cos(ang) * r, Math.sin(ang) * r, 0));
+      }
+      const geo = new THREE.BufferGeometry().setFromPoints(pts);
+      const line = new THREE.Line(geo, distantHexMat);
+      line.position.set((i - 2) * 170, 40 + Math.random() * 80, -520 - Math.random() * 150);
+      line.rotation.z = Math.random() * Math.PI;
+      scene.add(line);
+      distantHexes.push({ line, baseRot: line.rotation.z, speed: 0.01 + Math.random() * 0.02, phase: Math.random() * 9 });
+    }
+
+    // keep the sanctuary hidden until the camera is deep inside the comb,
+    // so the entrance reads as a dark, glowing portal instead of a floating tube.
+    const sanctuaryGroup = new THREE.Group();
+    scene.children.slice(sanctuaryStart).forEach((obj) => {
+      scene.remove(obj);
+      sanctuaryGroup.add(obj);
+    });
+    sanctuaryGroup.visible = false;
+    scene.add(sanctuaryGroup);
+
+    /* ---------- camera path ---------- */
+    const tunnelFog = new THREE.Color(0x1a0d04);
+    const sanctFog = new THREE.Color(0x6b4111);
+    const tunnelBg = new THREE.Color(0x150b03);
+    const sanctBg = new THREE.Color(0x4b2a0a);
+    const camTarget = new THREE.Vector3();
+    const camCenter = new THREE.Vector3();
+    const camAhead = new THREE.Vector3();
+
+    function updateCamera(p, time) {
+      const travel = clamp(p / 0.45, 0, 1);
+      const s = -0.07 + travel * 1.115;
+      centerAt(s, camCenter);
+      const blend = smoothstep(0.415, 0.62, p);
+      const settled = smoothstep(0.62, 1, p);
+      const targetZ = -308 - settled * 10;
+      const px = lerp(camCenter.x, 0, blend) + Math.sin(time * 0.17) * 0.55 * blend + pointer.x * 1.05 * blend;
+      const py = lerp(camCenter.y, 3.6, blend) + Math.sin(time * 0.22 + 1.4) * 0.55 * blend - pointer.y * 0.5 * blend;
+      const pz = lerp(camCenter.z, targetZ, blend);
+      camera.position.set(px, py, pz);
+
+      centerAt(clamp(s + 0.05, 0, 1.04), camAhead);
+      const goalX = lerp(camAhead.x, pointer.x * 22, blend);
+      const goalY = lerp(camAhead.y + 0.35, 26 - pointer.y * 12, blend);
+      const goalZ = lerp(camAhead.z, -1010, blend);
+      camTarget.set(goalX, goalY, goalZ);
+      camera.lookAt(camTarget);
+
+      const roll = (1 - blend) * Math.sin(s * Math.PI * 2.2) * 0.05 + blend * Math.sin(time * 0.26) * 0.007;
+      camera.rotation.z += roll;
+
+      const fov = 58 + 4.5 * (1 - blend) * smoothstep(0, 0.52, p);
+      if (Math.abs(fov - camera.fov) > 0.008) {
+        camera.fov += (fov - camera.fov) * 0.08;
+        camera.updateProjectionMatrix();
+      }
+
+      const fogMix = smoothstep(0.4, 0.7, p);
+      sanctuaryGroup.visible = p > 0.33;
+      const wallFade = 1 - smoothstep(0.28, 0.405, p);
+      wallMat.opacity = wallFade;
+      wall.visible = wallFade > 0.004;
+      membrane.material.opacity = 0.022 * wallFade;
+      membrane.visible = wallFade > 0.004;
+      scene.fog.color.copy(tunnelFog).lerp(sanctFog, fogMix);
+      scene.fog.density = lerp(0.015, 0.0011, fogMix);
+      scene.background.copy(tunnelBg).lerp(sanctBg, fogMix);
+      renderer.toneMappingExposure = lerp(0.82, 1.12, fogMix);
+      skyMat.opacity = lerp(0.55, 1, smoothstep(0.25, 0.62, p));
+      skyMat.transparent = true;
+    }
+
+    /* ---------- animation ---------- */
+    function render(p, time) {
+      updateCamera(p, time);
+
+      tunnelLights.forEach((entry) => {
+        entry.light.intensity = entry.base * (0.88 + 0.12 * Math.sin(time * 1.35 + entry.phase));
+      });
+      orbSprites.forEach((entry) => {
+        entry.sprite.position.y = entry.baseY + Math.sin(time * 0.46 + entry.phase) * entry.amp;
+        entry.sprite.material.opacity = entry.baseOpacity * (0.7 + 0.3 * Math.sin(time * 0.75 + entry.phase));
+      });
+      honey.material.opacity = (0.34 + Math.sin(time * 0.4) * 0.03) * (1 - smoothstep(0.3, 0.44, p));
+      const tunnelFade = smoothstep(0.2, 0.36, p);
+      ribMat.opacity = 0.6 * (1 - tunnelFade);
+      exitPortalMat.opacity = 0.95 * (1 - smoothstep(0.24, 0.38, p));
+      exitGlow.material.opacity = (0.22 + Math.sin(time * 0.5) * 0.03) * (1 - smoothstep(0.22, 0.385, p));
+
+      bokehs.forEach((entry) => {
+        entry.sprite.position.y = entry.baseY + Math.sin(time * entry.speed + entry.phase) * entry.amp;
+        entry.sprite.material.opacity = entry.baseOpacity * (0.72 + 0.28 * Math.sin(time * (entry.speed * 1.7) + entry.phase));
+      });
+      rayMats.forEach((entry) => {
+        entry.mat.opacity = entry.base * (0.75 + 0.25 * Math.sin(time * 0.18 + entry.phase));
+      });
+      sun.material.opacity = 0.55 + Math.sin(time * 0.33) * 0.04;
+      sunCore.scale.setScalar(80 + Math.sin(time * 0.5) * 3);
+      distantHexes.forEach((entry) => {
+        entry.line.rotation.z = entry.baseRot + time * entry.speed;
+      });
+      sanctDust.material.opacity = 0.42 + Math.sin(time * 0.35) * 0.08;
+
+      hemisphereFloat(time);
+      renderer.render(scene, camera);
+    }
+
+    function hemisphereFloat(time) {
+      hemi.intensity = 0.14 + Math.sin(time * 0.24) * 0.02;
+    }
+
+    function resize() {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, w < 760 ? 1.5 : 1.75));
+      renderer.setSize(w, h, false);
+    }
+    window.addEventListener('resize', resize, { passive: true });
+
+    // paint the first frame immediately so the reveal is never empty
+    updateCamera(0, 0);
+    renderer.render(scene, camera);
+
+    return { render, resize, scene, camera, renderer };
+  }
+
+  let experience = null;
+  try {
+    experience = createExperience();
+  } catch (err) {
+    console.error('WebGL scene could not start:', err);
+    document.documentElement.classList.add('no-webgl');
+    if (canvas) canvas.style.display = 'none';
+  }
+
+  renderProduct(0, false);
+  updateStory(0);
+
+  const journeyEl = $('#journey');
+  const glowEl = $('#cursorGlow');
+  let lastTime = performance.now();
+  let lastBarScale = -1;
+
+  function tick(now) {
+    requestAnimationFrame(tick);
+    const dt = Math.min((now - lastTime) / 1000, 0.05);
+    lastTime = now;
+    const time = now / 1000;
+
+    const target = clamp(progressState.raw, 0, 1);
+    progressState.p += (target - progressState.p) * (reduceMotion ? 0.45 : 0.14);
+    if (Math.abs(target - progressState.p) < 0.0002) progressState.p = target;
+
+    updateStory(progressState.p);
+
+    const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    const barScale = clamp(window.scrollY / maxScroll, 0, 1);
+    if (Math.abs(barScale - lastBarScale) > 0.0004) {
+      progressBar.style.transform = `scaleX(${barScale.toFixed(5)})`;
+      lastBarScale = barScale;
+    }
+
+    pointer.x += (pointer.tx - pointer.x) * 0.055;
+    pointer.y += (pointer.ty - pointer.y) * 0.055;
+
+    if (experience && !document.hidden) {
+      const scrollY = window.scrollY;
+      const canvasVisible = scrollY < journeyEl.offsetTop + journeyEl.offsetHeight + 300;
+      if (canvasVisible) experience.render(progressState.p, time, dt);
+    }
+  }
+  requestAnimationFrame(tick);
+
+  function applyProgress(p) {
+    const v = clamp(p, 0, 1);
+    progressState.raw = v;
+    progressState.p = v;
+    updateStory(v);
+    return v;
+  }
+
+  window.__nab = {
+    progressState,
+    scrollToProgress,
+    jumpToProduct,
+    products: PRODUCTS,
+    experience,
+    applyProgress
+  };
+
+})();
+
+</script>
+
+
+</body>
+</html>
